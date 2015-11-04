@@ -1,0 +1,68 @@
+﻿<ViewModels:MeasureViewModel xmlns:ViewModels="clr-namespace:IKinea.ViewModels" 
+xmlns:Rest="clr-namespace:Ikinea.Rest" 
+xmlns:Markup="clr-namespace:System.Windows.Markup;assembly=System.Xaml" 
+xmlns:System="clr-namespace:System;assembly=mscorlib" 
+xmlns:Windows="clr-namespace:System.Windows;assembly=WindowsBase" 
+xmlns:Toolkit="clr-namespace:Microsoft.Kinect.Toolkit;assembly=Microsoft.Kinect.Toolkit" 
+Hcm="200" HComputed="True" Vcm="100" VComputed="True" 
+MovingMode="False" ShowResult="True" 
+FurnitureImage="Ikea\png\S99004834.png" 
+FurnitureWidthPx="200" FurnitureHeightPx="200"
+Status="Vestibulum adipiscing class parturient curae"
+ >
+	<ViewModels:MeasureViewModel.Furniture>
+		<Rest:productsProduct URL="Vestibulum class nam aliquam curabitur" browseable="True" name="Blandit nibh nisi vestibulum" partNumber="Sed habitant facilisis inceptos fermentum">
+            <Rest:productsProduct.attributes>
+                <Rest:productsProductAttribute name="Cras sed maecenas"/>
+                <Rest:productsProductAttribute name="Curae duis"/>
+                <Rest:productsProductAttribute name="Phasellus adipiscing parturient praesent"/>
+                <Rest:productsProductAttribute name="Accumsan nunc dis amet donec"/>
+                <Rest:productsProductAttribute name="Ante est"/>
+            </Rest:productsProduct.attributes>
+            <Rest:productsProduct.categories>
+                <Rest:productsProductCategories>
+                    <Rest:productsProductCategories.parents>
+                        <Rest:productsProductCategoriesParents/>
+                    </Rest:productsProductCategories.parents>
+                    <Rest:productsProductCategories.series>
+                        <Rest:productsProductCategoriesSeries/>
+                    </Rest:productsProductCategories.series>
+                    <Rest:productsProductCategories.systems>
+                        <Rest:productsProductCategoriesSystems/>
+                    </Rest:productsProductCategories.systems>
+                </Rest:productsProductCategories>
+            </Rest:productsProduct.categories>
+            <Rest:productsProduct.items>
+                <Rest:productsProductItems>
+                    <Rest:productsProductItems.item>
+                        <Rest:productsProductItemsItem Dimensions="Integer consequat" 
+						ImageZoom="Ikea\png\S99004834.png" URL="Dictumst vivamus arcu" Volume="86" 
+						buyable="False" browseable="False" bti="True" careInst="Etiam vestibulum" 
+						custBenefit="Aliquam convallis diam mauris hac" custMaterials="Leo eget eleifend nullam aptent" 
+						designer="Facilisi mus elit fusce adipiscing" environment="Enim lorem erat auctor" 
+						facts="Parturient dignissim morbi congue" goodToKnow="Nulla cursus" measure="Dictum aliquet" new="True" 
+						name="Nec faucibus" pkgMeas="Vestibulum elementum" partNumber="Proin non per" reqAssembly="False" type="Augue eros"/>
+                    </Rest:productsProductItems.item>
+                </Rest:productsProductItems>
+            </Rest:productsProduct.items>
+            <Rest:productsProduct.numberOfItems>
+                <System:Byte/>
+            </Rest:productsProduct.numberOfItems>
+        </Rest:productsProduct>
+	</ViewModels:MeasureViewModel.Furniture>
+	<ViewModels:MeasureViewModel.HpxE>
+		<Windows:Point X="400" Y="200"/>
+	</ViewModels:MeasureViewModel.HpxE>
+	<ViewModels:MeasureViewModel.HpxS>
+		<Windows:Point X="200" Y="200"/>
+	</ViewModels:MeasureViewModel.HpxS>
+	<ViewModels:MeasureViewModel.SensorChooser>
+		<Toolkit:KinectSensorChooser RequiredConnectionId="Himenaeos aenean senectus"/>
+	</ViewModels:MeasureViewModel.SensorChooser>
+	<ViewModels:MeasureViewModel.VpxE>
+		<Windows:Point X="200" Y="400"/>
+	</ViewModels:MeasureViewModel.VpxE>
+	<ViewModels:MeasureViewModel.VpxS>
+		<Windows:Point X="200" Y="200"/>
+	</ViewModels:MeasureViewModel.VpxS>
+</ViewModels:MeasureViewModel>

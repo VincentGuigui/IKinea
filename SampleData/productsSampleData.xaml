@@ -1,0 +1,324 @@
+﻿<Rest:products xmlns:Rest="clr-namespace:Ikinea.Rest" xmlns:System="clr-namespace:System;assembly=mscorlib">
+    <Rest:products.product>
+        <Rest:productsProduct URL="Vestibulum class nam aliquam curabitur" browseable="True" name="Blandit nibh nisi vestibulum" partNumber="Sed habitant facilisis inceptos fermentum">
+            <Rest:productsProduct.attributes>
+                <Rest:productsProductAttribute name="Cras sed maecenas"/>
+                <Rest:productsProductAttribute name="Curae duis"/>
+                <Rest:productsProductAttribute name="Phasellus adipiscing parturient praesent"/>
+                <Rest:productsProductAttribute name="Accumsan nunc dis amet donec"/>
+                <Rest:productsProductAttribute name="Ante est"/>
+            </Rest:productsProduct.attributes>
+            <Rest:productsProduct.categories>
+                <Rest:productsProductCategories>
+                    <Rest:productsProductCategories.parents>
+                        <Rest:productsProductCategoriesParents/>
+                    </Rest:productsProductCategories.parents>
+                    <Rest:productsProductCategories.series>
+                        <Rest:productsProductCategoriesSeries/>
+                    </Rest:productsProductCategories.series>
+                    <Rest:productsProductCategories.systems>
+                        <Rest:productsProductCategoriesSystems/>
+                    </Rest:productsProductCategories.systems>
+                </Rest:productsProductCategories>
+            </Rest:productsProduct.categories>
+            <Rest:productsProduct.items>
+                <Rest:productsProductItems>
+                    <Rest:productsProductItems.item>
+                        <Rest:productsProductItemsItem Dimensions="Integer consequat" ImageZoom="Ikea\png\S99004834.png" URL="Dictumst vivamus arcu" Volume="86" buyable="False" browseable="False" bti="True" careInst="Etiam vestibulum" custBenefit="Aliquam convallis diam mauris hac" custMaterials="Leo eget eleifend nullam aptent" designer="Facilisi mus elit fusce adipiscing" environment="Enim lorem erat auctor" facts="Parturient dignissim morbi congue" goodToKnow="Nulla cursus" measure="Dictum aliquet" new="True" name="Nec faucibus" pkgMeas="Vestibulum elementum" partNumber="Proin non per" reqAssembly="False" type="Augue eros"/>
+                    </Rest:productsProductItems.item>
+                </Rest:productsProductItems>
+            </Rest:productsProduct.items>
+            <Rest:productsProduct.numberOfItems>
+                <System:Byte/>
+            </Rest:productsProduct.numberOfItems>
+        </Rest:productsProduct>
+        <Rest:productsProduct URL="Fringilla lectus commodo habitasse" browseable="True" name="Rutrum tincidunt" partNumber="Gravida metus ultrices">
+            <Rest:productsProduct.attributes>
+                <Rest:productsProductAttribute name="Dolor libero ligula interdum fames"/>
+                <Rest:productsProductAttribute name="Nisl felis ipsum hendrerit"/>
+                <Rest:productsProductAttribute name="Adipiscing conubia litora"/>
+                <Rest:productsProductAttribute name="Sem parturient sit luctus"/>
+                <Rest:productsProductAttribute name="Cubilia nunc justo vel"/>
+            </Rest:productsProduct.attributes>
+            <Rest:productsProduct.categories>
+                <Rest:productsProductCategories>
+                    <Rest:productsProductCategories.parents>
+                        <Rest:productsProductCategoriesParents/>
+                    </Rest:productsProductCategories.parents>
+                    <Rest:productsProductCategories.series>
+                        <Rest:productsProductCategoriesSeries/>
+                    </Rest:productsProductCategories.series>
+                    <Rest:productsProductCategories.systems>
+                        <Rest:productsProductCategoriesSystems/>
+                    </Rest:productsProductCategories.systems>
+                </Rest:productsProductCategories>
+            </Rest:productsProduct.categories>
+            <Rest:productsProduct.items>
+                <Rest:productsProductItems>
+                    <Rest:productsProductItems.item>
+                        <Rest:productsProductItemsItem Dimensions="Himenaeos lobortis" ImageZoom="Nam sed dapibus" URL="Vestibulum odio magnis imperdiet mattis" Volume="72" buyable="False" browseable="False" bti="True" careInst="Nascetur vestibulum dis lacus" custBenefit="Mauris malesuada pharetra mollis egestas" custMaterials="Placerat est" designer="Penatibus pulvinar orci" environment="Euismod montes" facts="Adipiscing sagittis" goodToKnow="Senectus pede" measure="Lorem sociosqu quam feugiat" new="True" name="Parturient suscipit nostra" pkgMeas="Vestibulum porttitor platea primis" partNumber="Magna quis ornare" reqAssembly="False" type="Massa torquent"/>
+                    </Rest:productsProductItems.item>
+                </Rest:productsProductItems>
+            </Rest:productsProduct.items>
+            <Rest:productsProduct.numberOfItems>
+                <System:Byte/>
+            </Rest:productsProduct.numberOfItems>
+        </Rest:productsProduct>
+        <Rest:productsProduct URL="Urna iaculis lacinia vestibulum hac" browseable="True" name="Velit fermentum" partNumber="Varius nam accumsan aenean">
+            <Rest:productsProduct.attributes>
+                <Rest:productsProductAttribute name="Adipiscing tristique"/>
+                <Rest:productsProductAttribute name="Laoreet leo parturient"/>
+                <Rest:productsProductAttribute name="Sapien ultricies"/>
+                <Rest:productsProductAttribute name="Vehicula cras mus"/>
+                <Rest:productsProductAttribute name="Venenatis semper morbi vulputate neque"/>
+            </Rest:productsProduct.attributes>
+            <Rest:productsProduct.categories>
+                <Rest:productsProductCategories>
+                    <Rest:productsProductCategories.parents>
+                        <Rest:productsProductCategoriesParents/>
+                    </Rest:productsProductCategories.parents>
+                    <Rest:productsProductCategories.series>
+                        <Rest:productsProductCategoriesSeries/>
+                    </Rest:productsProductCategories.series>
+                    <Rest:productsProductCategories.systems>
+                        <Rest:productsProductCategoriesSystems/>
+                    </Rest:productsProductCategories.systems>
+                </Rest:productsProductCategories>
+            </Rest:productsProduct.categories>
+            <Rest:productsProduct.items>
+                <Rest:productsProductItems>
+                    <Rest:productsProductItems.item>
+                        <Rest:productsProductItemsItem Dimensions="Netus duis nunc curabitur amet" ImageZoom="Sociis nulla vestibulum" URL="Vestibulum adipiscing ante" Volume="67" buyable="False" browseable="False" bti="True" careInst="Arcu taciti natoque" custBenefit="Nec non posuere" custMaterials="Potenti parturient volutpat" designer="Maecenas phasellus per tellus" environment="Tempor sed" facts="Consequat diam porta convallis" goodToKnow="Sem tempus praesent" measure="Vestibulum tortor" new="True" name="Vestibulum turpis" pkgMeas="Sodales eget facilisis purus risus" partNumber="Dignissim elementum pretium rhoncus adipiscing" reqAssembly="False" type="Sit vel parturient"/>
+                    </Rest:productsProductItems.item>
+                </Rest:productsProductItems>
+            </Rest:productsProduct.items>
+            <Rest:productsProduct.numberOfItems>
+                <System:Byte/>
+            </Rest:productsProduct.numberOfItems>
+        </Rest:productsProduct>
+        <Rest:productsProduct URL="Elit bibendum" browseable="True" name="Placerat pulvinar sagittis pede malesuada" partNumber="Senectus quam sed dis">
+            <Rest:productsProduct.attributes>
+                <Rest:productsProductAttribute name="Vitae sed"/>
+                <Rest:productsProductAttribute name="Viverra dis aliquam est vestibulum"/>
+                <Rest:productsProductAttribute name="Dictumst mauris"/>
+                <Rest:productsProductAttribute name="Nullam hac leo eleifend"/>
+                <Rest:productsProductAttribute name="Facilisi fringilla class mus habitasse"/>
+            </Rest:productsProduct.attributes>
+            <Rest:productsProduct.categories>
+                <Rest:productsProductCategories>
+                    <Rest:productsProductCategories.parents>
+                        <Rest:productsProductCategoriesParents/>
+                    </Rest:productsProductCategories.parents>
+                    <Rest:productsProductCategories.series>
+                        <Rest:productsProductCategoriesSeries/>
+                    </Rest:productsProductCategories.series>
+                    <Rest:productsProductCategories.systems>
+                        <Rest:productsProductCategoriesSystems/>
+                    </Rest:productsProductCategories.systems>
+                </Rest:productsProductCategories>
+            </Rest:productsProduct.categories>
+            <Rest:productsProduct.items>
+                <Rest:productsProductItems>
+                    <Rest:productsProductItems.item>
+                        <Rest:productsProductItemsItem Dimensions="Curae vestibulum faucibus enim" ImageZoom="Habitant inceptos erat donec integer" URL="Eros adipiscing interdum etiam nec" Volume="21" buyable="False" browseable="False" bti="True" careInst="Lobortis hendrerit quisque" custBenefit="Nascetur non vivamus fusce" custMaterials="Aliquam nibh per parturient vestibulum" designer="Sed vestibulum lorem" environment="Aliquet sem nisi" facts="Adipiscing parturient nisl" goodToKnow="Morbi vestibulum nunc nulla" measure="Vestibulum adipiscing odio" new="True" name="Blandit pharetra" pkgMeas="Vel proin parturient" partNumber="Himenaeos imperdiet sit" reqAssembly="False" type="Orci nam augue commodo aptent"/>
+                    </Rest:productsProductItems.item>
+                </Rest:productsProductItems>
+            </Rest:productsProduct.items>
+            <Rest:productsProduct.numberOfItems>
+                <System:Byte/>
+            </Rest:productsProduct.numberOfItems>
+        </Rest:productsProduct>
+        <Rest:productsProduct URL="Quis penatibus sociosqu" browseable="True" name="Vestibulum sed" partNumber="Praesent accumsan morbi">
+            <Rest:productsProduct.attributes>
+                <Rest:productsProductAttribute name="Auctor porttitor"/>
+                <Rest:productsProductAttribute name="Congue tincidunt dolor fames urna"/>
+                <Rest:productsProductAttribute name="Conubia est"/>
+                <Rest:productsProductAttribute name="Hac cursus felis"/>
+                <Rest:productsProductAttribute name="Leo tristique vestibulum suscipit"/>
+            </Rest:productsProduct.attributes>
+            <Rest:productsProduct.categories>
+                <Rest:productsProductCategories>
+                    <Rest:productsProductCategories.parents>
+                        <Rest:productsProductCategoriesParents/>
+                    </Rest:productsProductCategories.parents>
+                    <Rest:productsProductCategories.series>
+                        <Rest:productsProductCategoriesSeries/>
+                    </Rest:productsProductCategories.series>
+                    <Rest:productsProductCategories.systems>
+                        <Rest:productsProductCategoriesSystems/>
+                    </Rest:productsProductCategories.systems>
+                </Rest:productsProductCategories>
+            </Rest:productsProduct.categories>
+            <Rest:productsProduct.items>
+                <Rest:productsProductItems>
+                    <Rest:productsProductItems.item>
+                        <Rest:productsProductItemsItem Dimensions="Dictum ipsum" ImageZoom="Vestibulum adipiscing lectus" URL="Libero ligula" Volume="90" buyable="False" browseable="False" bti="True" careInst="Torquent justo parturient cubilia cras" custBenefit="Ultricies duis dapibus egestas" custMaterials="Vestibulum mus" designer="Ultrices lacus" environment="Vestibulum nec adipiscing venenatis" facts="Nunc parturient litora vehicula amet" goodToKnow="Luctus ante" measure="Non vulputate euismod" new="True" name="Feugiat volutpat arcu vestibulum lorem" pkgMeas="Gravida massa curabitur vestibulum" partNumber="Per magna maecenas" reqAssembly="False" type="Phasellus adipiscing magnis parturient metus"/>
+                    </Rest:productsProductItems.item>
+                </Rest:productsProductItems>
+            </Rest:productsProduct.items>
+            <Rest:productsProduct.numberOfItems>
+                <System:Byte/>
+            </Rest:productsProduct.numberOfItems>
+        </Rest:productsProduct>
+        <Rest:productsProduct URL="Mattis diam consequat" browseable="True" name="Vestibulum malesuada habitant blandit" partNumber="Quam commodo inceptos">
+            <Rest:productsProduct.attributes>
+                <Rest:productsProductAttribute name="Mauris vestibulum convallis iaculis adipiscing"/>
+                <Rest:productsProductAttribute name="Dignissim lacinia mollis neque"/>
+                <Rest:productsProductAttribute name="Laoreet elementum montes"/>
+                <Rest:productsProductAttribute name="Sem facilisis bibendum parturient"/>
+                <Rest:productsProductAttribute name="Eget natoque posuere sit"/>
+            </Rest:productsProduct.attributes>
+            <Rest:productsProduct.categories>
+                <Rest:productsProductCategories>
+                    <Rest:productsProductCategories.parents>
+                        <Rest:productsProductCategoriesParents/>
+                    </Rest:productsProductCategories.parents>
+                    <Rest:productsProductCategories.series>
+                        <Rest:productsProductCategoriesSeries/>
+                    </Rest:productsProductCategories.series>
+                    <Rest:productsProductCategories.systems>
+                        <Rest:productsProductCategoriesSystems/>
+                    </Rest:productsProductCategories.systems>
+                </Rest:productsProductCategories>
+            </Rest:productsProduct.categories>
+            <Rest:productsProduct.items>
+                <Rest:productsProductItems>
+                    <Rest:productsProductItems.item>
+                        <Rest:productsProductItemsItem Dimensions="Elit enim" ImageZoom="Potenti erat netus vel eros" URL="Vestibulum nibh fermentum nisi" Volume="51" buyable="False" browseable="False" bti="True" careInst="Nulla nam" custBenefit="Nisl fringilla sed pretium" custMaterials="Nunc rhoncus sodales" designer="Odio viverra aliquam porta dictumst" environment="Integer purus orci nostra" facts="Eleifend quisque habitasse hendrerit" goodToKnow="Pede vivamus" measure="Risus ornare aliquam" new="True" name="Velit himenaeos facilisi faucibus" pkgMeas="Class primis curae imperdiet" partNumber="Vitae platea" reqAssembly="False" type="Vestibulum aliquet donec adipiscing parturient"/>
+                    </Rest:productsProductItems.item>
+                </Rest:productsProductItems>
+            </Rest:productsProduct.items>
+            <Rest:productsProduct.numberOfItems>
+                <System:Byte/>
+            </Rest:productsProduct.numberOfItems>
+        </Rest:productsProduct>
+        <Rest:productsProduct URL="Penatibus vestibulum rutrum" browseable="True" name="Phasellus sed felis mauris" partNumber="Consequat convallis">
+            <Rest:productsProduct.attributes>
+                <Rest:productsProductAttribute name="Sapien etiam"/>
+                <Rest:productsProductAttribute name="Semper sociis porttitor"/>
+                <Rest:productsProductAttribute name="Conubia cubilia interdum dis adipiscing"/>
+                <Rest:productsProductAttribute name="Tincidunt parturient taciti fusce est"/>
+                <Rest:productsProductAttribute name="Vestibulum quis urna"/>
+            </Rest:productsProduct.attributes>
+            <Rest:productsProduct.categories>
+                <Rest:productsProductCategories>
+                    <Rest:productsProductCategories.parents>
+                        <Rest:productsProductCategoriesParents/>
+                    </Rest:productsProductCategories.parents>
+                    <Rest:productsProductCategories.series>
+                        <Rest:productsProductCategoriesSeries/>
+                    </Rest:productsProductCategories.series>
+                    <Rest:productsProductCategories.systems>
+                        <Rest:productsProductCategoriesSystems/>
+                    </Rest:productsProductCategories.systems>
+                </Rest:productsProductCategories>
+            </Rest:productsProduct.categories>
+            <Rest:productsProduct.items>
+                <Rest:productsProductItems>
+                    <Rest:productsProductItems.item>
+                        <Rest:productsProductItemsItem Dimensions="Tellus cras vestibulum" ImageZoom="Tempor dapibus adipiscing" URL="Tristique lorem ultricies lobortis" Volume="21" buyable="False" browseable="False" bti="True" careInst="Duis hac egestas" custBenefit="Leo nascetur morbi parturient nunc" custMaterials="Vestibulum vestibulum euismod amet" designer="Nulla adipiscing ante" environment="Mus arcu nec proin" facts="Tempus tortor" goodToKnow="Diam augue feugiat dolor" measure="Venenatis turpis parturient vulputate" new="True" name="Gravida pharetra iaculis curabitur vestibulum" pkgMeas="Aenean placerat eget elit fames" partNumber="Varius non" reqAssembly="False" type="Vestibulum per enim pulvinar erat"/>
+                    </Rest:productsProductItems.item>
+                </Rest:productsProductItems>
+            </Rest:productsProduct.items>
+            <Rest:productsProduct.numberOfItems>
+                <System:Byte/>
+            </Rest:productsProduct.numberOfItems>
+        </Rest:productsProduct>
+        <Rest:productsProduct URL="Sem nullam eros adipiscing sagittis" browseable="True" name="Sodales porttitor" partNumber="Accumsan vestibulum">
+            <Rest:productsProduct.attributes>
+                <Rest:productsProductAttribute name="Parturient dignissim vestibulum"/>
+                <Rest:productsProductAttribute name="Elementum vestibulum ipsum aptent justo"/>
+                <Rest:productsProductAttribute name="Adipiscing auctor congue cursus"/>
+                <Rest:productsProductAttribute name="Nibh senectus"/>
+                <Rest:productsProductAttribute name="Dictum facilisis"/>
+            </Rest:productsProduct.attributes>
+            <Rest:productsProduct.categories>
+                <Rest:productsProductCategories>
+                    <Rest:productsProductCategories.parents>
+                        <Rest:productsProductCategoriesParents/>
+                    </Rest:productsProductCategories.parents>
+                    <Rest:productsProductCategories.series>
+                        <Rest:productsProductCategoriesSeries/>
+                    </Rest:productsProductCategories.series>
+                    <Rest:productsProductCategories.systems>
+                        <Rest:productsProductCategoriesSystems/>
+                    </Rest:productsProductCategories.systems>
+                </Rest:productsProductCategories>
+            </Rest:productsProduct.categories>
+            <Rest:productsProduct.items>
+                <Rest:productsProductItems>
+                    <Rest:productsProductItems.item>
+                        <Rest:productsProductItemsItem Dimensions="Nisi sit lacinia nisl vel" ImageZoom="Parturient nam vestibulum" URL="Lectus sociosqu lacus" Volume="69" buyable="False" browseable="False" bti="True" careInst="Fermentum fringilla laoreet lorem habitasse" custBenefit="Libero magna ligula" custMaterials="Vestibulum massa metus" designer="Litora suscipit" environment="Torquent hendrerit" facts="Ultrices vehicula luctus natoque nunc" goodToKnow="Himenaeos morbi" measure="Adipiscing imperdiet magnis" new="True" name="Volutpat malesuada posuere" pkgMeas="Vestibulum praesent potenti mauris odio" partNumber="Sed maecenas parturient mattis neque" reqAssembly="False" type="Pretium dis penatibus orci rhoncus"/>
+                    </Rest:productsProductItems.item>
+                </Rest:productsProductItems>
+            </Rest:productsProduct.items>
+            <Rest:productsProduct.numberOfItems>
+                <System:Byte/>
+            </Rest:productsProduct.numberOfItems>
+        </Rest:productsProduct>
+        <Rest:productsProduct URL="Mollis pede netus" browseable="True" name="Vestibulum adipiscing turpis amet ante" partNumber="Consequat convallis varius">
+            <Rest:productsProduct.attributes>
+                <Rest:productsProductAttribute name="Nulla viverra adipiscing montes"/>
+                <Rest:productsProductAttribute name="Aliquam nostra"/>
+                <Rest:productsProductAttribute name="Parturient bibendum"/>
+                <Rest:productsProductAttribute name="Vestibulum quam dictumst eleifend"/>
+                <Rest:productsProductAttribute name="Ornare quis platea vestibulum"/>
+            </Rest:productsProduct.attributes>
+            <Rest:productsProduct.categories>
+                <Rest:productsProductCategories>
+                    <Rest:productsProductCategories.parents>
+                        <Rest:productsProductCategoriesParents/>
+                    </Rest:productsProductCategories.parents>
+                    <Rest:productsProductCategories.series>
+                        <Rest:productsProductCategoriesSeries/>
+                    </Rest:productsProductCategories.series>
+                    <Rest:productsProductCategories.systems>
+                        <Rest:productsProductCategoriesSystems/>
+                    </Rest:productsProductCategories.systems>
+                </Rest:productsProductCategories>
+            </Rest:productsProduct.categories>
+            <Rest:productsProduct.items>
+                <Rest:productsProductItems>
+                    <Rest:productsProductItems.item>
+                        <Rest:productsProductItemsItem Dimensions="Est facilisi hac porta urna" ImageZoom="Integer tincidunt primis rutrum" URL="Quisque tristique sapien leo" Volume="14" buyable="False" browseable="False" bti="True" careInst="Faucibus habitant purus risus ultricies" custBenefit="Velit semper" custMaterials="Sociis venenatis taciti" designer="Cras vivamus vulputate" environment="Duis tellus" facts="Vitae mus curabitur class nec" goodToKnow="Adipiscing aliquam" measure="Curae tempor parturient" new="True" name="Non phasellus inceptos tempus per" pkgMeas="Aliquet lobortis nunc" partNumber="Vestibulum interdum" reqAssembly="False" type="Tortor donec etiam nascetur"/>
+                    </Rest:productsProductItems.item>
+                </Rest:productsProductItems>
+            </Rest:productsProduct.items>
+            <Rest:productsProduct.numberOfItems>
+                <System:Byte/>
+            </Rest:productsProduct.numberOfItems>
+        </Rest:productsProduct>
+        <Rest:productsProduct URL="Fusce aenean sed lorem dignissim" browseable="True" name="Per egestas" partNumber="Habitasse magna vestibulum hendrerit">
+            <Rest:productsProduct.attributes>
+                <Rest:productsProductAttribute name="Mauris morbi arcu"/>
+                <Rest:productsProductAttribute name="Sem nullam parturient aptent pharetra"/>
+                <Rest:productsProductAttribute name="Auctor placerat sit elementum congue"/>
+                <Rest:productsProductAttribute name="Blandit vel diam nam"/>
+                <Rest:productsProductAttribute name="Sed dis pulvinar eget"/>
+            </Rest:productsProduct.attributes>
+            <Rest:productsProduct.categories>
+                <Rest:productsProductCategories>
+                    <Rest:productsProductCategories.parents>
+                        <Rest:productsProductCategoriesParents/>
+                    </Rest:productsProductCategories.parents>
+                    <Rest:productsProductCategories.series>
+                        <Rest:productsProductCategoriesSeries/>
+                    </Rest:productsProductCategories.series>
+                    <Rest:productsProductCategories.systems>
+                        <Rest:productsProductCategoriesSystems/>
+                    </Rest:productsProductCategories.systems>
+                </Rest:productsProductCategories>
+            </Rest:productsProduct.categories>
+            <Rest:productsProduct.items>
+                <Rest:productsProductItems>
+                    <Rest:productsProductItems.item>
+                        <Rest:productsProductItemsItem Dimensions="Cursus est dictum lectus hac" ImageZoom="Commodo elit conubia cubilia" URL="Nulla proin" Volume="52" buyable="False" browseable="False" bti="True" careInst="Facilisis enim erat eros libero" custBenefit="Leo vestibulum ligula" custMaterials="Vestibulum adipiscing litora" designer="Augue luctus" environment="Magnis fermentum" facts="Dolor sagittis fames felis ipsum" goodToKnow="Mus senectus dapibus" measure="Nec nibh sociosqu suscipit mattis" new="True" name="Justo lacus nisi" pkgMeas="Torquent non nisl lorem" partNumber="Parturient mauris" reqAssembly="False" type="Fringilla ultrices vestibulum"/>
+                    </Rest:productsProductItems.item>
+                </Rest:productsProductItems>
+            </Rest:productsProduct.items>
+            <Rest:productsProduct.numberOfItems>
+                <System:Byte/>
+            </Rest:productsProduct.numberOfItems>
+        </Rest:productsProduct>
+    </Rest:products.product>
+</Rest:products>

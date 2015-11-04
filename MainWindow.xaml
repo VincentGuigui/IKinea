@@ -1,0 +1,119 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mskt="clr-namespace:Microsoft.Kinect.Toolkit;assembly=Microsoft.Kinect.Toolkit"
+        xmlns:msktc="clr-namespace:Microsoft.Kinect.Toolkit.Controls;assembly=Microsoft.Kinect.Toolkit.Controls"
+        xmlns:ViewModels="clr-namespace:IKinea.ViewModels" 
+        xmlns:Converters="clr-namespace:IKinea.Converters" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        x:Name="window" mc:Ignorable="d" x:Class="IKinea.MainWindow"
+        Title="IKinea" Width="1366" Height="768" Background="Black"
+        Loaded="Window_Loaded" KeyDown="Window_KeyDown" Closing="Window_Closing" 
+        WindowStartupLocation="CenterScreen" WindowState="Maximized" SizeChanged="window_SizeChanged">
+
+    <Window.Resources>
+        <Converters:UrlToBitmapConverter x:Key="UrlToBitmapConverter"/>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <Converters:PointsToPathConverter x:Key="PointsToPathConverter"/>
+        <ViewModels:MeasureViewModel x:Key="MeasureViewModelDataSource" d:IsDataSource="True"/>
+        <ViewModels:FurnitureViewModel x:Key="FurnitureViewModelDataSource" d:IsDataSource="True"/>
+        <Storyboard x:Key="FadeBG">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="IntroImage">
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseIn"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="IntroImage">
+                <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <DataTemplate x:Key="productsProductTemplate">
+            <StackPanel Orientation="Vertical" Width="150" DataContext="{Binding Mode=OneWay}" d:DataContext="{d:DesignData /SampleData/productsProductSampleData.xaml}">
+                <Image  Source="{Binding items.item.ImageZoom, Converter={StaticResource UrlToBitmapConverter}}" Width="100" Height="100"/>
+                <TextBlock  Text="{Binding name}" HorizontalAlignment="Center" Foreground="White"/>
+                <TextBlock Text="{Binding items.item.Dimensions}" HorizontalAlignment="Center" Foreground="White"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded" SourceName="IntroImage">
+            <BeginStoryboard Storyboard="{StaticResource FadeBG}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Viewer" DataContext="{Binding Source={StaticResource MeasureViewModelDataSource}}"
+		d:DataContext="{d:DesignData /SampleData/MeasureViewModelSampleData.xaml}" SizeChanged="Viewer_SizeChanged" Background="Black" >
+            <Image x:Name="LivingRoomSample" Stretch="UniformToFill" Source="Images/traditional-living-room.jpg"
+                    MouseMove="Canvas_MouseMove" MouseDown="Canvas_MouseDown" MouseUp="Canvas_MouseUp"/>
+            <Image Stretch="UniformToFill" 
+                    x:Name="KinectColorViewer" 
+                    Visibility="Hidden" Source="{Binding View}" DataContext="{Binding KinectViewer}"
+                    MouseMove="Canvas_MouseMove" MouseDown="Canvas_MouseDown" MouseUp="Canvas_MouseUp" />
+            <Canvas RenderTransformOrigin="0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  >
+
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform 
+						ScaleX="{Binding Scaling, ElementName=window, Mode=OneWay}"
+						ScaleY="{Binding ScaleX, RelativeSource={RelativeSource Self}}"
+						/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Image x:Name="Furniture" Source="{Binding FurnitureImage, Converter={StaticResource UrlToBitmapConverter}}"
+						Width="{Binding FurnitureWidthPx}" Height="{Binding FurnitureHeightPx}" 
+						Stretch="Uniform"
+						Canvas.Left="{Binding HpxS.X}" Canvas.Top="{Binding VpxS.Y}"
+						Visibility="{Binding ShowResult, Converter={StaticResource BooleanToVisibilityConverter}}"
+                        MouseMove="Furniture_MouseMove"
+                        MouseDown="Furniture_MouseDown"
+                        MouseUp="Furniture_MouseUp"/>
+                <TextBlock Foreground="LightGreen" FontSize="40" Canvas.Left="{Binding HpxS.X}" Canvas.Top="{Binding HpxS.Y}" Margin="0,-50,0,0"
+                        Text="{Binding Hcm, StringFormat=\{0:0\} cm}" Visibility="{Binding HComputed, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBlock Foreground="LightGreen" FontSize="40" Canvas.Left="{Binding VpxS.X}" Canvas.Top="{Binding VpxS.Y}" Margin="-50,0,0,0"
+                        Text="{Binding Vcm, StringFormat=\{0:0\} cm}" Visibility="{Binding VComputed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <TextBlock.LayoutTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="-90" CenterY="1" CenterX="-1"/>
+                        </TransformGroup>
+                    </TextBlock.LayoutTransform>
+                </TextBlock>
+                <Path x:Name="H" Fill="#FF0C0C85" StrokeThickness="4" Stroke="Orange" 
+				Data="{Binding Hpx, Converter={StaticResource PointsToPathConverter}}"  
+				Visibility="{Binding HComputed, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <Path x:Name="V" Fill="#FF0C0C85" StrokeThickness="4" Stroke="Orange"  
+				Data="{Binding Vpx, Converter={StaticResource PointsToPathConverter}}"  
+				Visibility="{Binding HComputed, Converter={StaticResource BooleanToVisibilityConverter}}" />
+            </Canvas>
+        </Grid>
+        <ListView Grid.Column="1"
+		 x:Name="ListFurnitures" HorizontalAlignment="Right" Width="175" 
+        	Background="#FF515151"
+        	d:DataContext="{d:DesignData /SampleData/productsSampleData.xaml}"
+        	ItemsSource="{Binding Products, Source={StaticResource FurnitureViewModelDataSource}}"
+        	ItemTemplate="{DynamicResource productsProductTemplate}" 
+        	SelectionChanged="ListFurnitures_SelectionChanged" 
+        	BorderBrush="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
+        <Image Grid.Column="0" x:Name="Logo" Source="Images\Ikinea.png" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" >
+            <Image.ContextMenu>
+                <ContextMenu x:Name="LogoContextMenu"/>
+            </Image.ContextMenu>
+        </Image>
+        <!--<mskt:KinectSensorChooserUI Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="sensorChooserUi"  />-->
+        <Image Grid.Column="0" x:Name="IntroImage" Source="Images\Describe.png"  HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill" Height="520" Width="300"/>
+        <TextBlock Grid.Column="0" x:Name="Status" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding Status}" Foreground="LightGreen"  FontSize="40" FontWeight="Bold"/>
+        <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            <Rectangle Fill="Green" Stroke="DarkGreen" Width="5" Height="5" Visibility="{Binding KinectSensorManager.KinectSensorEnabled, Converter={StaticResource BooleanToVisibilityConverter}, ElementName=window}"/>
+            <Rectangle Fill="Green" Stroke="DarkGreen" Width="5" Height="5" Visibility="{Binding KinectSensorManager.SkeletonStreamEnabled, Converter={StaticResource BooleanToVisibilityConverter}, ElementName=window}"/>
+            <Rectangle Fill="Green" Stroke="DarkGreen" Width="5" Height="5" Visibility="{Binding KinectSensorManager.ColorStreamEnabled, Converter={StaticResource BooleanToVisibilityConverter}, ElementName=window}"/>
+        </StackPanel>
+    </Grid>
+</Window>

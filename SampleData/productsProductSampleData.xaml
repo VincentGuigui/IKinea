@@ -1,0 +1,153 @@
+﻿<Rest:productsProduct xmlns:Rest="clr-namespace:Ikinea.Rest" xmlns:System="clr-namespace:System;assembly=mscorlib" URL="Aenean curabitur vestibulum" browseable="True" name="Hac leo cras" partNumber="Vestibulum tincidunt magnis mus">
+	<Rest:productsProduct.attributes>
+		<Rest:productsProductAttribute name="Class mauris phasellus aliquam cras">
+			<Rest:productsProductAttribute.value>
+				<System:String>Consequat nam curae donec adipiscing</System:String>
+				<System:String>Integer convallis sed</System:String>
+				<System:String>Etiam quisque nullam</System:String>
+				<System:String>Fusce maecenas dis vivamus parturient</System:String>
+				<System:String>Dignissim elementum lorem vestibulum</System:String>
+			</Rest:productsProductAttribute.value>
+		</Rest:productsProductAttribute>
+		<Rest:productsProductAttribute name="Aptent facilisis">
+			<Rest:productsProductAttribute.value>
+				<System:String>Morbi auctor praesent duis congue</System:String>
+				<System:String>Est nulla</System:String>
+				<System:String>Hac accumsan cursus</System:String>
+				<System:String>Proin fermentum vestibulum</System:String>
+				<System:String>Leo augue nunc dolor dictum</System:String>
+			</Rest:productsProductAttribute.value>
+		</Rest:productsProductAttribute>
+		<Rest:productsProductAttribute name="Mus aliquam aliquet lectus">
+			<Rest:productsProductAttribute.value>
+				<System:String>Nec bibendum fringilla libero fames</System:String>
+				<System:String>Adipiscing ligula</System:String>
+				<System:String>Dictumst litora eleifend</System:String>
+				<System:String>Habitasse non hendrerit parturient</System:String>
+				<System:String>Blandit facilisi per</System:String>
+			</Rest:productsProductAttribute.value>
+		</Rest:productsProductAttribute>
+		<Rest:productsProductAttribute name="Himenaeos faucibus amet">
+			<Rest:productsProductAttribute.value>
+				<System:String>Imperdiet vestibulum vestibulum adipiscing</System:String>
+				<System:String>Sed commodo</System:String>
+				<System:String>Habitant conubia cubilia parturient</System:String>
+				<System:String>Malesuada penatibus felis vestibulum luctus</System:String>
+				<System:String>Vestibulum magnis sem porttitor mattis</System:String>
+			</Rest:productsProductAttribute.value>
+		</Rest:productsProductAttribute>
+		<Rest:productsProductAttribute name="Inceptos sit adipiscing interdum parturient">
+			<Rest:productsProductAttribute.value>
+				<System:String>Vestibulum ipsum mauris</System:String>
+				<System:String>Lobortis dapibus mollis ante vestibulum</System:String>
+				<System:String>Justo egestas vel</System:String>
+				<System:String>Tincidunt tristique lacus nascetur arcu</System:String>
+				<System:String>Ultricies nam euismod</System:String>
+			</Rest:productsProductAttribute.value>
+		</Rest:productsProductAttribute>
+		<Rest:productsProductAttribute name="Venenatis sed vulputate">
+			<Rest:productsProductAttribute.value>
+				<System:String>Curabitur montes feugiat diam</System:String>
+				<System:String>Adipiscing dis</System:String>
+				<System:String>Eget nostra phasellus</System:String>
+				<System:String>Parturient lorem</System:String>
+				<System:String>Vestibulum elit enim</System:String>
+			</Rest:productsProductAttribute.value>
+		</Rest:productsProductAttribute>
+		<Rest:productsProductAttribute name="Magna vestibulum">
+			<Rest:productsProductAttribute.value>
+				<System:String>Adipiscing ornare pharetra parturient</System:String>
+				<System:String>Vestibulum platea primis</System:String>
+				<System:String>Erat gravida placerat</System:String>
+				<System:String>Est eros vestibulum adipiscing rutrum</System:String>
+				<System:String>Parturient vestibulum hac sapien vestibulum</System:String>
+			</Rest:productsProductAttribute.value>
+		</Rest:productsProductAttribute>
+		<Rest:productsProductAttribute name="Nibh massa">
+			<Rest:productsProductAttribute.value>
+				<System:String>Semper leo pulvinar</System:String>
+				<System:String>Consequat convallis</System:String>
+				<System:String>Mus sociis adipiscing</System:String>
+				<System:String>Nisi taciti parturient</System:String>
+				<System:String>Dignissim nec</System:String>
+			</Rest:productsProductAttribute.value>
+		</Rest:productsProductAttribute>
+		<Rest:productsProductAttribute name="Non nisl nunc elementum">
+			<Rest:productsProductAttribute.value>
+				<System:String>Tellus per metus sagittis</System:String>
+				<System:String>Morbi sed vestibulum</System:String>
+				<System:String>Iaculis facilisis</System:String>
+				<System:String>Lacinia tempor vestibulum sem</System:String>
+				<System:String>Senectus neque fermentum laoreet sit</System:String>
+			</Rest:productsProductAttribute.value>
+		</Rest:productsProductAttribute>
+		<Rest:productsProductAttribute name="Natoque odio vel">
+			<Rest:productsProductAttribute.value>
+				<System:String>Posuere netus sociosqu</System:String>
+				<System:String>Suscipit potenti pretium nulla nam</System:String>
+				<System:String>Fringilla porta torquent</System:String>
+				<System:String>Habitasse orci sed adipiscing</System:String>
+				<System:String>Hendrerit ultrices pede</System:String>
+			</Rest:productsProductAttribute.value>
+		</Rest:productsProductAttribute>
+	</Rest:productsProduct.attributes>
+	<Rest:productsProduct.categories>
+		<Rest:productsProductCategories>
+			<Rest:productsProductCategories.parents>
+				<Rest:productsProductCategoriesParents>
+					<Rest:productsProductCategoriesParents.category>
+						<Rest:productsProductCategoriesParentsCategory URL="Dis himenaeos purus parturient" catalogIdentifier="Rhoncus est vestibulum hac vehicula" name="Volutpat leo"/>
+					</Rest:productsProductCategoriesParents.category>
+				</Rest:productsProductCategoriesParents>
+			</Rest:productsProductCategories.parents>
+			<Rest:productsProductCategories.series>
+				<Rest:productsProductCategoriesSeries>
+					<Rest:productsProductCategoriesSeries.category>
+						<Rest:productsProductCategoriesSeriesCategory URL="Sodales mus maecenas nec imperdiet" catalogIdentifier="Malesuada penatibus praesent vestibulum accumsan" name="Tempus bibendum viverra non"/>
+					</Rest:productsProductCategoriesSeries.category>
+				</Rest:productsProductCategoriesSeries>
+			</Rest:productsProductCategories.series>
+			<Rest:productsProductCategories.systems>
+				<Rest:productsProductCategoriesSystems>
+					<Rest:productsProductCategoriesSystems.category>
+						<Rest:productsProductCategoriesSystemsCategory URL="Quam dictumst quis adipiscing" catalogIdentifier="Eleifend risus" name="Per parturient porttitor tortor turpis"/>
+					</Rest:productsProductCategoriesSystems.category>
+				</Rest:productsProductCategoriesSystems>
+			</Rest:productsProductCategories.systems>
+		</Rest:productsProductCategories>
+	</Rest:productsProduct.categories>
+	<Rest:productsProduct.items>
+		<Rest:productsProductItems>
+			<Rest:productsProductItems.item>
+                <Rest:productsProductItemsItem Dimensions="Tincidunt facilisi tristique aliquam" 
+				ImageZoom="Ikea\png\S99004834.png" 
+				URL="Venenatis quisque sed velit vitae" Volume="24" buyable="False" browseable="False" bti="True" careInst="Vestibulum sit" custBenefit="Facilisis fermentum fringilla litora vestibulum" custMaterials="Adipiscing pharetra nisl parturient" designer="Luctus vel habitasse egestas nam" environment="Hendrerit dolor himenaeos euismod sed" facts="Nunc imperdiet placerat" goodToKnow="Fames dis vestibulum" measure="Odio orci feugiat malesuada" new="True" name="Pulvinar sagittis gravida pede" pkgMeas="Quis penatibus" partNumber="Iaculis lacinia quam" reqAssembly="False" type="Felis laoreet urna est porttitor">
+					<Rest:productsProductItemsItem.attributesItems>
+						<Rest:productsProductItemsItemAttributeItem name="Sem vulputate varius urna cras" value="Sit curabitur aenean vivamus vel"/>
+						<Rest:productsProductItemsItemAttributeItem name="Phasellus vestibulum class mauris faucibus" value="Duis nam"/>
+						<Rest:productsProductItemsItemAttributeItem name="Curae sed aliquam nunc" value="Amet habitant vestibulum ante"/>
+						<Rest:productsProductItemsItemAttributeItem name="Dis est arcu diam" value="Aliquet hac nullam inceptos"/>
+						<Rest:productsProductItemsItemAttributeItem name="Adipiscing blandit aptent auctor congue" value="Eget parturient elit donec consequat"/>
+						<Rest:productsProductItemsItemAttributeItem name="Etiam leo interdum cursus enim" value="Mus dictum convallis"/>
+						<Rest:productsProductItemsItemAttributeItem name="Fusce nec lobortis non vestibulum" value="Erat commodo per"/>
+						<Rest:productsProductItemsItemAttributeItem name="Eros sed conubia lorem vestibulum" value="Adipiscing morbi nibh"/>
+						<Rest:productsProductItemsItemAttributeItem name="Lectus parturient" value="Nulla nascetur cubilia nisi sem"/>
+						<Rest:productsProductItemsItemAttributeItem name="Libero dignissim proin" value="Augue elementum ligula dapibus"/>
+					</Rest:productsProductItemsItem.attributesItems>
+					<Rest:productsProductItemsItem.images>
+						<Rest:productsProductItemsItemImages/>
+					</Rest:productsProductItemsItem.images>
+					<Rest:productsProductItemsItem.nopackages>
+						<System:Byte/>
+					</Rest:productsProductItemsItem.nopackages>
+					<Rest:productsProductItemsItem.prices>
+						<Rest:productsProductItemsItemPrices/>
+					</Rest:productsProductItemsItem.prices>
+				</Rest:productsProductItemsItem>
+			</Rest:productsProductItems.item>
+		</Rest:productsProductItems>
+	</Rest:productsProduct.items>
+	<Rest:productsProduct.numberOfItems>
+		<System:Byte/>
+	</Rest:productsProduct.numberOfItems>
+</Rest:productsProduct>

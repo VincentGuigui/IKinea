@@ -1,0 +1,1646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<global_data xsi:noNamespaceSchemaLocation="schema/global_data.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<?#include url="definition_data.xml" id="definition_data"?>
+	<?#include url="gallery_data.xml" id="gallery_data"?>
+	<?#include url="combinations_data.xml" id="combinations_data"?>
+	<?#include url="xi50_data.xml" id="xi50_data"?>
+	<icom>
+		<mocked active="false">
+			<path>../mockdata</path>
+			<file>preview_ikea_com_se_en_catalog_products.xml</file>
+		</mocked>
+	</icom>
+	<revision>b770e9d_20131227</revision>
+  	<irwstats actiontype="planner" roomset="" func="trackRIAaction" trackversion="2" assettype="other">Besta_uppleva</irwstats>  
+	<constants>
+	   	<constant id="parseUnpublished" value="false"/>
+		<constant id="disableIOWSloading" value="false"/>
+		<constant id="wallStartHeight" value="2400"/>
+		<constant id="wallMaxHeight" value="5000"/>
+		<constant id="wallMinHeight" value="2000"/>
+		<constant id="savedStateTimeout" value="400"/>
+		<constant id="use_caching" value="true"/>
+		<constant id="show_error_box" value="true"/>
+		<constant id="disableGallery" value="false"/>
+		<constant id="disableTags" value="false"/>
+		<constant id="disablePopulate" value="false"/>
+		<constant id="disablePropping" value="false"/>
+		<constant id="showScribbles" value="false"/>
+		<constant id="maxTextureSize" value="1024"/>
+        <constant id="minTextureSize" value="64"/>
+		
+		<constant id="filespath" value="/files/bestaplanner"/>
+		
+		<constant id="usesessions"  value="true"/>
+		<constant id="usesessionfiles"  value="true"/>
+		<constant id="usekiosksessions"  value="true"/>
+		<constant id="usekiosksessionfiles"  value="true"/>
+
+		<!-- The config for sessionUrls's is moved into the included xi50_data file. -->
+
+		<constant id="sessionurl2"  value ="flashfacade/customer/irw/" />
+		<constant id="sessionaccept" value="application/vnd.iows+xml; version=1.0"/>
+		<constant id="sessionconsumer" value="BestaPlanner"/>
+		<constant id="sessioncontract_auth" value="26696"/>
+		<constant id="sessioncontract_cust" value="26696"/>
+		<constant id="clearshoppinglistglobal" value="true"/>
+		
+	</constants>
+	
+	<assets>
+		<movieAsset id="GTK_start_up" autoPlay="true">
+			<url>movies/besta_start_up.flv</url>
+		</movieAsset>
+		<movieAsset id="GTK_step_01" autoPlay="true">
+			<url>movies/step_01_final.flv</url>
+		</movieAsset>
+		<movieAsset id="GTK_step_02" autoPlay="true">
+			<url>movies/step_02_final.flv</url>
+		</movieAsset>
+		<movieAsset id="GTK_step_03" autoPlay="true">
+			<url>movies/step_03_final.flv</url>
+		</movieAsset>
+		<movieAsset id="GTK_step_04" autoPlay="true">
+			<url>movies/step_04_final.flv</url>
+		</movieAsset>
+		<movieAsset id="GTK_step_05" autoPlay="true">
+			<url>movies/step_05_final.flv</url>
+		</movieAsset>
+		<movieAsset id="GTK_step_06" autoPlay="true">
+			<url>movies/step_06_final.flv</url>
+		</movieAsset>
+	</assets>
+
+	<plannerHelp>
+		   <help id="user_guide" name="UG_USER_GUIDE">
+					 <chapter id="build_a_room" name="UG_CH01">
+							  <section name="UG_MOVIE_00" type="movie" asset="GTK_start_up" text="UG_MOVIE_00_TEXT"/>
+							  <section name="UG_MOVIE_01" type="movie" asset="GTK_step_01" text="UG_MOVIE_01_TEXT" />
+							  <section name="UG_MOVIE_02" type="movie" asset="GTK_step_02" text="UG_MOVIE_02_TEXT"/>
+							  <section name="UG_MOVIE_03" type="movie" asset="GTK_step_03" text="UG_MOVIE_03_TEXT"/>
+							  <section name="UG_MOVIE_04" type="movie" asset="GTK_step_04" text="UG_MOVIE_04_TEXT"/>
+							  <section name="UG_MOVIE_05" type="movie" asset="GTK_step_05" text="UG_MOVIE_05_TEXT"/>
+							  <section name="UG_MOVIE_06" type="movie" asset="GTK_step_06" text="UG_MOVIE_06_TEXT"/>
+					 </chapter>
+		   </help>
+		   <help id="quick_start" name="HELP_QUICK_START">
+					 <section name="UG_MOVIE_00" type="movie" asset="GTK_start_up" text="UG_MOVIE_00_TEXT"/>
+		   </help>
+	</plannerHelp>
+	
+<!--
+	<plannerHelp>
+		<help id="user_guide" name="UG_USER_GUIDE">
+			<chapter id="build_a_room" name="UG_CH01">
+				<section name="UG_MOVIE_01" type="movie" asset="GTK_step_01" text="UG_MOVIE_01_TEXT" />
+				<section name="UG_MOVIE_02" type="movie" asset="GTK_step_02" text="UG_MOVIE_02_TEXT"/>
+				<section name="UG_MOVIE_03" type="movie" asset="GTK_step_03" text="UG_MOVIE_03_TEXT"/>
+				<section name="UG_MOVIE_04" type="movie" asset="GTK_step_04" text="UG_MOVIE_04_TEXT"/>
+				<section name="UG_MOVIE_05" type="movie" asset="GTK_step_05" text="UG_MOVIE_05_TEXT"/>
+			</chapter>
+			<chapter id="build_a_room" name="UG_CH02">
+				<section name="UG_MOVIE_00" type="movie" asset="GTK_start_up" text="UG_MOVIE_01_TEXT"/>
+			</chapter>
+		</help>
+	</plannerHelp>
+-->
+
+   	<plannerShaders>
+		<shader id="coloredGlass" ambientColor='16777215' ambientVal='1.0' specularColor='16777215' specularValue='0.25' alpha='0.8' gloss='10' envMap='true' envAlpha='0.2' repeat='true'/>
+		<shader id="shelfGlass" ambientColor='16777215' ambientVal='1.0' specularColor='16777215' specularValue='0.2' alpha='0.2' gloss='10' envMap='true' envAlpha='0.5' repeat='true'/>
+		<shader id="default" ambientColor='5592405' ambientVal='1.0' specularColor='16777215' specularValue='0.2' alpha='1' gloss='32' envMap='false' repeat='true'/>
+		<shader id="glass" ambientColor='16777215' ambientVal='1.0' specularColor='16777215' specularValue='0.25' alpha='0.2' gloss='10' envMap='true' envAlpha='0.2' repeat='true'/>
+		<shader id="glass_in_product" ambientColor='16777215' ambientVal='1.0' specularColor='16777215' specularValue='0.25' alpha='0.4' gloss='10' envMap='true' envAlpha='0.3' repeat='true'/>
+		<shader id="glassVase" ambientColor='16777215' ambientVal='1.0' specularColor='16777215' specularValue='0.25' alpha='0.8' gloss='10' envMap='true' envAlpha='0.2' repeat='true'/>
+		<shader id="blackGlass" ambientColor='16777215' ambientVal='1.0' specularColor='16777215' specularValue='0.04' alpha='0.4' gloss='6' envMap='true' envAlpha='0.9' repeat='true'/>
+		<shader id="topPanel" ambientColor='16777215' ambientVal='1.0' specularColor='16777215' specularValue='0.04' alpha='0.7' gloss='6' envMap='true' envAlpha='0.9' repeat='true'/>
+		<shader id="frostedGlass" ambientColor='16777215' ambientVal='1.0' specularColor='16777215' specularValue='0.6' alpha='0.8' gloss='10' envMap='true' envAlpha='0.04' repeat='true'/>
+		<shader id="highGloss" ambientColor='16777215' ambientVal='1.0' specularColor='16777215' specularValue='0.2' alpha='1' gloss='32' envMap='true' envAlpha='0.1' repeat='true'/>
+		<shader id="highGlossPlastic" ambientColor='16777215' ambientVal='1.0' specularColor='16777215' specularValue='0.2' alpha='1' gloss='32' envMap='true' envAlpha='0.25' repeat='true'/>
+		<shader id="chrome" ambientColor='16777215' ambientVal='1.0' specularColor='16777215' specularValue='0.2' alpha='1' gloss='32' envMap='true' envAlpha='0.1' repeat='true'/>
+		<shader id="water" ambientColor='16777215' ambientVal='1.0' specularColor='16777215' specularValue='0.5' alpha='1' gloss='32' envMap='true' envAlpha='0.1' repeat='true'/>
+		<shader id="wallpaper" ambientColor='16777215' ambientVal='0.4' specularColor='16777215' specularValue='0.2' alpha='1' gloss='44' envMap='false' envAlpha='0.1' repeat='true'/>
+		<shader id="floorTexture" ambientColor='16777215' ambientVal='0.85' specularColor='16777215' specularValue='0.2' alpha='1' gloss='44' envMap='false' envAlpha='0.1' repeat='true'/>
+		<shader id="white_leg" ambientColor='16777215' ambientVal='1.0' specularColor='16777215' specularValue='0.2' alpha='1' gloss='10' envMap='false' envAlpha='0.1' repeat='true'/>
+		<shader id="mirror" ambientColor='16777215' ambientVal='5.0' specularColor='16777215' specularValue='1.8' alpha='1' gloss='500' envMap='true' envAlpha='0.57' repeat='true'/>
+		<shader id="ghost" ambientColor='16777215' ambientVal='1.0' specularColor='16777215' specularValue='0' alpha='0.5' gloss='0' envMap='false' envAlpha='0.17' repeat='true'/>		
+	</plannerShaders>
+   
+   <materials>
+		<material id="clearGlass" type="material" shader="glass" color="0xffffff"/>
+		<material id="shelfGlass" type="material" shader="shelfGlass" color="0xaeefd9"/>
+		<material id="glassBlack" type="material" shader="coloredGlass" color="0x000000"/>
+		<material id="glassWhite" type="material" shader="coloredGlass" color="0xffffff"/>
+		<material id="glassGrey" type="material" shader="coloredGlass" color="0x6c6c6c"/>
+		
+		<material id="temperedGlass" type="material" shader="frostedGlass" color="0xffffff"/>
+		<material id="beerGlass" type="material" shader="glass" color="0x22dd66"/>
+	   
+		<material id="wall_color_red" type="wall_color" url="" thumbUrl="" color="0xd10622" descId="COLOR_RED_TEXT" shader="wallpaper" sortOrder="1" />
+		<material id="wall_color_pink" type="wall_color" url="" thumbUrl="" color="0xe8b3c9" descId="COLOR_PINK_TEXT" shader="default" sortOrder="2"/>
+		<material id="wall_color_purple" type="wall_color" url="" thumbUrl="" color="0xc9b9cc" descId="COLOR_PURPLE_TEXT" shader="default" sortOrder="3"/>
+		<material id="wall_color_dark_purple" type="wall_color" url="" thumbUrl="" color="0x74205c" descId="COLOR_DARK_PURPLE_TEXT" shader="default" sortOrder="4"/>
+		<material id="wall_color_dark_blue" type="wall_color" url="" thumbUrl="" color="0x063c79" descId="COLOR_DARK_BLUE_TEXT" shader="default" sortOrder="5"/>
+		<material id="wall_color_deep_blue" type="wall_color" url="" thumbUrl="" color="0x263753" descId="COLOR_DEEP_BLUE_TEXT" shader="default" sortOrder="6"/>
+		<material id="wall_color_light_blue" type="wall_color" url="" thumbUrl="" color="0xc8dae7" descId="COLOR_LIGHT_BLUE_TEXT" shader="default" sortOrder="7"/>
+		<material id="wall_color_green" type="wall_color" url="" thumbUrl="" color="0x447957" descId="COLOR_GREEN_TEXT" shader="default" sortOrder="8"/>
+		<material id="wall_color_light_green" type="wall_color" url="" thumbUrl="" color="0xbddec9" descId="COLOR_LIGHT_GREEN_TEXT" shader="default" sortOrder="9"/>
+		<material id="wall_color_lime_green" type="wall_color" url="" thumbUrl="" color="0xaebd78" descId="COLOR_LIME_GREEN_TEXT" shader="default" sortOrder="10"/>
+		<material id="wall_color_yellow" type="wall_color" url="" thumbUrl="" color="0xf7f788" descId="COLOR_YELLOW_TEXT" shader="default" sortOrder="11"/>
+		<material id="wall_color_orange" type="wall_color" url="" thumbUrl="" color="0xf79c42" descId="COLOR_ORANGE_TEXT" shader="default" sortOrder="12"/>
+		<material id="wall_color_light_grey" type="wall_color" url="" thumbUrl="" color="0xcccccc" descId="COLOR_LIGHT_GREY_TEXT" shader="default" sortOrder="13"/>
+		<material id="wall_color_dark_grey" type="wall_color" url="" thumbUrl="" color="0x666666" descId="COLOR_DARK_GREY_TEXT" shader="default" sortOrder="14"/>
+		<material id="wall_color_brown" type="wall_color" url="" thumbUrl="" color="0xcc9966" descId="COLOR_BROWN_TEXT" shader="default" sortOrder="15"/>
+		<material id="wall_color_black" type="wall_color" url="" thumbUrl="" color="0x000000" descId="COLOR_BLACK_TEXT" shader="default" sortOrder="16"/>
+		<material id="wall_color_white" type="wall_color" url="" thumbUrl="" color="0xffffff" descId="COLOR_WHITE_TEXT" shader="default" sortOrder="17"/>
+		<material id="wall_color_light_yellow" type="wall_color" url="" thumbUrl="" color="0xffffcc" descId="COLOR_LIGHT_YELLOW_TEXT" shader="default" sortOrder="18"/>
+		<material id="wall_color_light_brown" type="wall_color" url="" thumbUrl="" color="0xd1beaa" descId="COLOR_LIGHT_BROWN_TEXT" shader="default" sortOrder="19"/>
+		<material id="wall_color_grey_blue" type="wall_color" url="" thumbUrl="" color="0xa3b5bb" descId="COLOR_GREY_BLUE_TEXT" shader="default" sortOrder="20"/>
+		<material id="wall_color_beige" type="wall_color" url="" thumbUrl="" color="0xe2dcb9" descId="COLOR_BEIGE_TEXT" shader="default" sortOrder="21"/>
+		<material id="wall_color_turquoise" type="wall_color" url="" thumbUrl="" color="0x66cccc" descId="COLOR_TURQUOISE_TEXT" shader="default" sortOrder="22"/>
+		<material id="wall_color_grey_green" type="wall_color" url="" thumbUrl="" color="0xa7bdb3" descId="COLOR_GREY_GREEN_TEXT" shader="default" sortOrder="23"/>
+		<material id="def_wall_transp_mat" type="wall_color" showInMenu="false" url="" thumbUrl="" color="0xFFFFFF" descId="COLOR_GREY_GREEN_TEXT" shader="default" sortOrder="24"/>
+		
+		<material id="wall_0" sortOrder="1" type="wall_texture" url="/house/walls/Wall_PanelBlackHoriz_1x1m.jpg" thumbUrl="/house/walls/Wall_PanelBlackHoriz_1x1m_t.jpg" descId="WALL_BLACKPANEL_HOR_TEXT" shader="wallpaper" tileWidth="1000" tileHeight="1000"/>
+		<material id="wall_1" sortOrder="2" type="wall_texture" url="/house/walls/Wall_PanelBlackVert_1x1m.jpg" thumbUrl="/house/walls/Wall_PanelBlackVert_1x1m_t.jpg" descId="WALL_BLACKPANEL_VER_TEXT" shader="wallpaper" tileWidth="1000" tileHeight="1000"/>
+		<material id="wall_2" sortOrder="3" type="wall_texture" url="/house/walls/Wall_PanelWhiteHoriz_1x1m.jpg" thumbUrl="/house/walls/Wall_PanelWhiteHoriz_1x1m_t.jpg" descId="WALL_WHITEPANEL_HOR_TEXT" shader="wallpaper" tileWidth="1000" tileHeight="1000"/>
+		<material id="wall_3" sortOrder="4" type="wall_texture" url="/house/walls/Wall_PanelWhiteVert_1x1m.jpg" thumbUrl="/house/walls/Wall_PanelWhiteVert_1x1m_t.jpg" descId="WALL_WHITEPANEL_VER_TEXT" shader="wallpaper" tileWidth="1000" tileHeight="1000"/>
+		<material id="wall_4" sortOrder="5" type="wall_texture" url="/house/walls/Wall_PlasterGrey_1x1m.jpg" thumbUrl="/house/walls/Wall_PlasterGrey_1x1m_t.jpg" descId="WALL_PLASTER_GREY_TEXT" shader="wallpaper" tileWidth="1000" tileHeight="1000"/>
+		<material id="wall_5" sortOrder="6" type="wall_texture" url="/house/walls/Wall_PlasterWhite_1x1m.jpg" thumbUrl="/house/walls/Wall_PlasterWhite_1x1m_t.jpg" descId="WALL_PLASTER_WHITE_TEXT" shader="wallpaper" tileWidth="1000" tileHeight="1000"/>
+		<material id="wall_6" sortOrder="7" type="wall_texture" url="/house/walls/Wall_Boheme_1x1m.jpg" thumbUrl="/house/walls/Wall_Boheme_1x1m_t.jpg" descId="WALL_BOHEME_TEXT" shader="wallpaper" tileWidth="10000" tileHeight="1000"/>
+		<material id="wall_7" sortOrder="8" type="wall_texture" url="/house/walls/Tapet_Marcel_1x1m.jpg" thumbUrl="/house/walls/Tapet_Marcel_1x1m_t.jpg" descId="WALL_MARCEL_TEXT" shader="wallpaper" tileWidth="100" tileHeight="100"/>
+		<!--material id="wall_8" sortOrder="9" type="wall_texture" url="/house/walls/Bolon_Fabric_550x550mm.jpg" thumbUrl="/house/walls/Bolon_Fabric_550x550mm_t.jpg" descId="WALL_BOLON_FABRIC_TEXT" shader="wallpaper" tileWidth="4000" tileHeight="4000"/-->
+		<material id="measure" sortOrder="10" type="wall_texture" url="/house/walls/wallMeasureNew.jpg" thumbUrl="/house/walls/wallMeasureNew_t.jpg" descId="WALL_MEASURE_TEXT" shader="wallpaper" tileWidth="1000" tileHeight="1000"/>
+
+		<material id="floor_color_light_grey" sortOrder="1" type="floor_color" url="" thumbUrl="" color="0xcccccc" descId="COLOR_LIGHT_GREY_TEXT" shader="floorTexture"/>
+		<material id="floor_color_black" sortOrder="2" type="floor_color" url="" thumbUrl="" color="0x000000" descId="COLOR_BLACK_TEXT" shader="floorTexture"/>
+		<material id="floor_color_dark_grey" sortOrder="3" type="floor_color" url="" thumbUrl="" color="0x666666" descId="COLOR_DARK_GREY_TEXT" shader="floorTexture"/>
+		<material id="floor_color_beige" sortOrder="4" type="floor_color" url="" thumbUrl="" color="0xcccc99" descId="COLOR_BEIGE_TEXT" shader="floorTexture"/>
+		<material id="floor_color_red" sortOrder="5" type="floor_color" url="" thumbUrl="" color="0xcc3333" descId="COLOR_RED_TEXT" shader="floorTexture"/>
+		<material id="floor_color_green" sortOrder="6" type="floor_color" url="" thumbUrl="" color="0x336600" descId="COLOR_GREEN_TEXT" shader="floorTexture"/>
+		
+		<!--material id="floor_mtrl" type="floor_texture" url="/house/floors/Floor_birchparquet_150x150cm.jpg" thumbUrl="/house/floors/Floor_birchparquet_150x150cm_t.jpg" descId="FLOOR_BIRCH_PARQUET_TEXT" shader="floorTexture" tileWidth="1500" tileHeight="1500"/-->
+		<material id="floor_0" sortOrder="1" type="floor_texture" url="/house/floors/Floor_birchparquet_150x150cm.jpg" thumbUrl="/house/floors/Floor_birchparquet_150x150cm_t.jpg" descId="FLOOR_BIRCH_PARQUET_TEXT" shader="floorTexture" tileWidth="1500" tileHeight="1500"/>
+		<material id="floor_1" sortOrder="2" type="floor_texture" url="/house/floors/Floor_concrete_3x3m.jpg" thumbUrl="/house/floors/Floor_concrete_3x3m_t.jpg" descId="FLOOR_CONCRETE_TEXT" shader="floorTexture" tileWidth="3000" tileHeight="3000"/>
+		<material id="floor_2" sortOrder="3" type="floor_texture" url="/house/floors/Floor_FabricBolon_55x55cm.jpg" thumbUrl="/house/floors/Floor_FabricBolon_55x55cm_t.jpg" descId="FLOOR_BOLON_FABRIC_TEXT" shader="floorTexture" tileWidth="550" tileHeight="550"/>
+		<material id="floor_3" sortOrder="4" type="floor_texture" url="/house/floors/Floor_fishboneparquet_60x60cm.jpg" thumbUrl="/house/floors/Floor_fishboneparquet_60x60cm_t.jpg" descId="FLOOR_FISHBONE_PARQUET_TEXT" shader="floorTexture" tileWidth="600" tileHeight="600"/>
+		<material id="floor_4" sortOrder="5" type="floor_texture" url="/house/floors/Floor_oakparquet_150x150cm.jpg" thumbUrl="/house/floors/Floor_oakparquet_150x150cm_t.jpg" descId="FLOOR_OAK_PARQUET_TEXT" shader="floorTexture" tileWidth="1500" tileHeight="1500"/>
+		<material id="floor_5" sortOrder="6" type="floor_texture" url="/house/floors/Floor_walnutparquet_150x150cm.jpg" thumbUrl="/house/floors/Floor_walnutparquet_150x150cm_t.jpg" descId="FLOOR_WALNUT_PARQUET_TEXT" shader="floorTexture" tileWidth="1500" tileHeight="1500"/>
+		<material id="floor_6" sortOrder="7" type="floor_texture" url="/house/floors/Akltro_Stratus_15x15cm.jpg" thumbUrl="/house/floors/Akltro_Stratus_15x15cm_t.jpg" descId="FLOOR_AKLTRO_STRATUS_TEXT" shader="floorTexture" tileWidth="150" tileHeight="150"/>
+		<material id="floor_7" sortOrder="8" type="floor_texture" url="/house/floors/Artigo_Smoke_61x61cm.jpg" thumbUrl="/house/floors/Artigo_Smoke_61x61cm_t.jpg" descId="FLOOR_ARTIGO_SMOKE_TEXT" shader="floorTexture" tileWidth="610" tileHeight="610"/>
+		<material id="floor_8" sortOrder="9" type="floor_texture" url="/house/floors/Linoleum_1x1m.jpg" thumbUrl="/house/floors/Linoleum_1x1m_t.jpg" descId="FLOOR_LINOLIUM_TEXT" shader="floorTexture" tileWidth="1000" tileHeight="1000"/>
+		<material id="floor_9" sortOrder="10" type="floor_texture" url="/house/floors/Floor_tile.jpg" thumbUrl="/house/floors/Floor_tile_t.jpg" descId="FLOOR_TILE_TEXT" shader="floorTexture" tileWidth="1000" tileHeight="1000"/>
+		<!--material id="floor_9" type="floor_texture" url="/house/floors/Floor_squareparquet_1x1m.jpg" thumbUrl="/house/floors/Floor_squareparquet_1x1m_t.jpg" descId="FLOOR_LINOLIUM_TEXT" shader="floorTexture" tileWidth="1000" tileHeight="1000"/>
+		<material id="floor_10" type="floor_texture" url="/house/floors/Floor_checkers.jpg" thumbUrl="/house/floors/Floor_checkers_t.jpg" descId="FLOOR_LINOLIUM_TEXT" shader="floorTexture" tileWidth="1000" tileHeight="1000"/>
+		<material id="floor_11" type="floor_texture" url="/house/floors/test.jpg" thumbUrl="/house/floors/test_t.jpg" descId="FLOOR_LINOLIUM_TEXT" shader="floorTexture" tileWidth="2000" tileHeight="2000"/>
+		<material id="floor_12" type="floor_texture" url="/house/floors/Floor_scratched.jpg" thumbUrl="/house/floors/Floor_scratched_t.jpg" descId="FLOOR_LINOLIUM_TEXT" shader="floorTexture" tileWidth="1000" tileHeight="1000"/-->
+		
+		<material id="floor_measure" sortOrder="10" type="floor_texture" showInMenu="false" url="/house/walls/wallMeasureNew.jpg" thumbUrl="/house/walls/wallMeasureNew_t.jpg" descId="WALL_MEASURE_TEXT" shader="floorTexture" tileWidth="1000" tileHeight="1000"/>
+   </materials>
+ 
+	<colors>
+		<color id="color_aluminium" sortOrder="1" shader="chrome" name="COLOR_ALUMINIUM_TEXT" assetName="color_aluminium"/>
+		<color id="color_beech" sortOrder="1" name="COLOR_BEECH_TEXT" assetName="color_beech"/>
+		<color id="color_birch" sortOrder="1" name="COLOR_BIRCH_TEXT" assetName="color_birch"/>
+		<color id="color_black" sortOrder="1" name="COLOR_BLACK_TEXT" assetName="color_black"/>
+		<color id="color_black_brown" sortOrder="1" name="COLOR_BLACK_BROWN_TEXT" assetName="color_black_brown"/>
+		<color id="color_blue" sortOrder="1" name="COLOR_BLUE_TEXT" assetName="color_blue"/>
+		<color id="color_chrome" shader="chrome" sortOrder="1" name="COLOR_CHROME_TEXT" assetName="color_chrome"/>
+		<color id="color_dark_grey" sortOrder="1" name="COLOR_DARK_GREY_TEXT" assetName="color_dark_grey"/>
+		<color id="color_fabric_black" sortOrder="1" name="COLOR_FABRIC_BLACK_TEXT" assetName="color_fabric_black"/>
+		<color id="color_glass" shader="glass" sortOrder="1" name="COLOR_GLASS_TEXT" assetName="color_glass"/>
+		<color id="color_glass_vase" shader="glassVase" sortOrder="1" name="COLOR_GLASS_TEXT" assetName="color_glass_vase"/>
+		<color id="color_glass_black" shader="blackGlass" sortOrder="1" name="COLOR_GLASS_BLACK_TEXT" assetName="color_glass_black"/>
+		<color id="color_glass_white" shader="frostedGlass" sortOrder="1" name="COLOR_GLASS_WHITE_TEXT" assetName="color_glass_white"/>
+		<color id="color_golden_brown" sortOrder="1" name="COLOR_GOLDEN_BROWN_TEXT" assetName="color_golden_brown"/>
+		<color id="color_green" sortOrder="1" name="COLOR_GREEN_TEXT" assetName="color_green"/>
+		<color id="color_grey" sortOrder="1" name="COLOR_GREY_TEXT" assetName="color_grey"/>
+		<color id="color_grey_black" sortOrder="1" name="COLOR_GREY_BLACK_TEXT" assetName="color_grey_black"/>
+		<color id="color_grey_brown" sortOrder="1" name="COLOR_GREY_BROWN_TEXT" assetName="color_grey_brown"/>
+		<color id="color_high_gloss_grey" shader="highGloss" sortOrder="1" name="COLOR_HIGH_GLOSS_GREY_TEXT" assetName="color_high_gloss_grey"/>
+		<color id="color_high_gloss_red" shader="highGloss" sortOrder="1" name="COLOR_HIGH_GLOSS_RED_TEXT" assetName="color_high_gloss_red"/>
+		<color id="color_high_gloss_white" shader="highGloss" sortOrder="1" name="COLOR_HIGH_GLOSS_WHITE_TEXT" assetName="color_high_gloss_white"/>
+		<color id="color_light_beige" sortOrder="1" name="COLOR_LIGHT_BEIGE_TEXT" assetName="color_light_beige"/>
+		<color id="color_nickel_plated" shader="chrome" sortOrder="1" name="COLOR_NICKEL_PLATED_TEXT" assetName="color_nickel_plated"/>
+		<color id="color_oak" sortOrder="1" name="COLOR_OAK_TEXT" assetName="color_oak"/>
+		<color id="color_orange" sortOrder="1" name="COLOR_ORANGE_TEXT" assetName="color_orange"/>
+		<color id="color_red" sortOrder="1" name="COLOR_RED_TEXT" assetName="color_red"/>
+		<color id="color_silver" shader="chrome" sortOrder="1" name="COLOR_SILVER_TEXT" assetName="color_silver"/>
+		<color id="color_white" sortOrder="1" name="COLOR_WHITE_TEXT" assetName="color_white"/>
+		<color id="color_yellow" sortOrder="1" name="COLOR_YELLOW_TEXT" assetName="color_yellow"/>
+		<color id="color_brown" sortOrder="1" name="COLOR_BROWN_TEXT" assetName="color_brown"/>
+		<color id="color_lilac" sortOrder="1" name="COLOR_LILAC_TEXT" assetName="color_lilac"/>
+	</colors>
+	
+	<roomMenu>
+		<extensions>
+		</extensions>
+		<innerBlocks>
+			<product id="object_cube_product"/>
+			<product id="object_square_product"/>
+			<product id="object_cylinder_product"/>
+		</innerBlocks>
+		<doorsWindows>
+		</doorsWindows>
+	</roomMenu>
+	
+	<objectInfo>
+		<object id="CUBE_RESIZE" name="PRODUCT_CUBE_TEXT" asset="" info=""/>
+		<object id="CYLINDER_PILLAR_RESIZE" name="PRODUCT_PILLAR_TEXT" asset="" info=""/>
+		<object id="SQUARE_PILLAR_RESIZE" name="PRODUCT_PILLAR_TEXT" asset="" info=""/>
+		<object id="DRU02_SPR" name="PRODUCT_DRU02_SPR_NAME_TEXT" asset="" info="PRODUCT_DRU02_SPR_INFO_TEXT"/>
+		<object id="GHOST_MODEL" name="PRODUCT_GHOST_TEXT" asset="" info="PRODUCT_GHOST_INFO_TEXT"/>
+		<object id="SUPERGRP_CON01" name="PRODUCT_CUSTOMIZE_TABLE_TEXT" asset="" info="PRODUCT_GALANT_INFO_TEXT"/>
+		<object id="SUPERGRP_CRT01" name="PRODUCT_CUSTOMIZE_TABLE_TEXT" asset="" info="PRODUCT_GALANT_INFO_TEXT"/>
+		<object id="SUPERGRP_CRT02" name="PRODUCT_CUSTOMIZE_TABLE_TEXT" asset="" info="PRODUCT_GALANT_INFO_TEXT"/>
+		<object id="SUPERGRP_TB01" name="PRODUCT_CUSTOMIZE_TABLE_TEXT" asset="" info="PRODUCT_GALANT_INFO_TEXT"/>
+		<object id="SUPERGRP_TB02" name="PRODUCT_CUSTOMIZE_TABLE_TEXT" asset="" info="PRODUCT_GALANT_INFO_TEXT"/>
+		<object id="SUPERGRP_TB03" name="PRODUCT_CUSTOMIZE_TABLE_TEXT" asset="" info="PRODUCT_GALANT_INFO_TEXT"/>
+		<object id="SUPERGRP_TB03B" name="PRODUCT_CUSTOMIZE_TABLE_TEXT" asset="" info="PRODUCT_GALANT_INFO_TEXT"/>
+		<object id="SUPERGRP_TB04" name="PRODUCT_CUSTOMIZE_TABLE_TEXT" asset="" info="PRODUCT_GALANT_INFO_TEXT"/>
+		<object id="WORKSTATION_1_Model" name="PRODUCT_WORKSPACE" asset="" info=""/>
+		<object id="WORKSTATION_2_Model" name="PRODUCT_WORKSPACE" asset="" info=""/>
+		<object id="WORKSTATION_3_Model" name="PRODUCT_WORKSPACE" asset="" info=""/>
+		<object id="WORKSTATION_3_Model" name="PRODUCT_WORKSPACE" asset="" info=""/>
+		<object id="WORKSTATION_4_Model" name="PRODUCT_WORKSPACE" asset="" info=""/>
+		<object id="WORKSTATION_5_Model" name="PRODUCT_WORKSPACE" asset="" info=""/>
+		<object id="WORKSTATION_6_Model" name="PRODUCT_WORKSPACE" asset="" info=""/>
+		<object id="WORKSTATION_7_Model" name="PRODUCT_WORKSPACE" asset="" info=""/>
+		<object id="WORKSTATION_8_Model" name="PRODUCT_WORKSPACE" asset="" info=""/>
+		<object id="WORKSTATION_9_Model" name="PRODUCT_WORKSPACE" asset="" info=""/>
+	</objectInfo>
+	
+	<!---- Detta är ett exempel man behöver inte ha alias. Aliases taggen krävs dock -->
+	<deeplinkAlias>
+		<spr id="S09001142">
+			<aliases>
+				<alias id="S09001142"/>
+			</aliases>
+		</spr>
+		<spr id="S09928585">
+			<aliases/>
+		</spr>
+		<spr id="S09933073">
+			<aliases/>
+		</spr>
+		<spr id="S19002004">
+			<aliases/>
+		</spr>
+		<spr id="S19004116">
+			<aliases/>
+		</spr>
+		<spr id="S19005917">
+			<aliases/>
+		</spr>
+		<spr id="S19897060">
+			<aliases/>
+		</spr>
+		<spr id="S19917398">
+			<aliases/>
+		</spr>
+		<spr id="S19928575">
+			<aliases/>
+		</spr>
+		<spr id="S19933020">
+			<aliases/>
+		</spr>
+		<spr id="S29001933">
+			<aliases/>
+		</spr>
+		<spr id="S29001990">
+			<aliases/>
+		</spr>
+		<spr id="S29928650">
+			<aliases/>
+		</spr>
+		<spr id="S39907360">
+			<aliases/>
+		</spr>
+		<spr id="S39907850">
+			<aliases/>
+		</spr>
+		<spr id="S39923548">
+			<aliases/>
+		</spr>
+		<spr id="S39928555">
+			<aliases/>
+		</spr>
+		<spr id="S49001116">
+			<aliases/>
+		</spr>
+		<spr id="S49907656">
+			<aliases/>
+		</spr>
+		<spr id="S59001960">
+			<aliases/>
+		</spr>
+		<spr id="S59005920">
+			<aliases/>
+		</spr>
+		<spr id="S59895158">
+			<aliases/>
+		</spr>
+		<spr id="S59896695">
+			<aliases/>
+		</spr>
+		<spr id="S59910333">
+			<aliases/>
+		</spr>
+		<spr id="S59928286">
+			<aliases/>
+		</spr>
+		<spr id="S69000521">
+			<aliases/>
+		</spr>
+		<spr id="S69001988">
+			<aliases/>
+		</spr>
+		<spr id="S69929600">
+			<aliases/>
+		</spr>
+		<spr id="S79004118">
+			<aliases/>
+		</spr>
+		<spr id="S79904270">
+			<aliases/>
+		</spr>
+		<spr id="S79909809">
+			<aliases/>
+		</spr>
+		<spr id="S79917239">
+			<aliases/>
+		</spr>
+		<spr id="S89001973">
+			<aliases/>
+		</spr>
+		<spr id="S89001992">
+			<aliases/>
+		</spr>
+		<spr id="S89888948">
+			<aliases/>
+		</spr>
+		<spr id="S89896694">
+			<aliases/>
+		</spr>
+		<spr id="S89908183">
+			<aliases/>
+		</spr>
+		<spr id="S89933026">
+			<aliases/>
+		</spr>
+		<spr id="S99001114">
+			<aliases/>
+		</spr>
+		<spr id="S99001977">
+			<aliases/>
+		</spr>
+		<spr id="S99005918">
+			<aliases/>
+		</spr>
+	</deeplinkAlias>
+	
+	<gallery>
+		<rooms>
+			<room id="1" name="GS_STYLENAME01_TEXT" build="b01" width="1800" height="630" depth="410" asset="gallery/bsut01a.jpg" imageFormat="4:3" sortType="mediaStorage" textX="10" textY="10" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME01_INCLUDED" information="GS_STYLENAME01_INFO"/>
+				<communicatedProducts>
+					<product id="20102154" amount="1"/>
+					<product id="50102157" amount="1"/>
+					<product id="80210834" amount="2"/>
+				</communicatedProducts>
+			</room>
+			<room id="2" name="GS_STYLENAME02_TEXT" build="b02" width="3000" height="1910" depth="410" asset="gallery/bsut02a.jpg" imageFormat="4:3" sortType="mediaStorage" textX="230" textY="80" textColor="0x000000">
+				<details included="GS_STYLENAME02_INCLUDED" information="GS_STYLENAME02_INFO"/>
+				<communicatedProducts>
+					<product id="80134048" amount="1"/>
+					<product id="40134050" amount="1"/>
+					<product id="00134052" amount="1"/>
+					<product id="60134049" amount="2"/>
+					<product id="10227220" amount="5"/>
+					<product id="80134430" amount="4"/>
+					<product id="30103474" amount="2"/>
+				</communicatedProducts>
+			</room>
+			<room id="3" name="GS_STYLENAME03_TEXT" build="b03" width="3000" height="1660" depth="420" asset="gallery/bsut03a.jpg" imageFormat="4:3" sortType="mediaStorage" textX="20" textY="175" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME03_INCLUDED" information="GS_STYLENAME03_INFO"/>
+				<communicatedProducts>
+					<product id="80102151" amount="3"/>
+					<product id="10102135" amount="1"/>
+					<product id="50102138" amount="1"/>
+					<product id="40102148" amount="1"/>
+					<product id="20227272" amount="6"/>
+					<product id="90227278" amount="8"/>
+					<product id="90105719" amount="8"/>
+				</communicatedProducts>
+			</room>
+			<room id="4" name="GS_STYLENAME04_TEXT" build="b04" width="2400" height="740" depth="410" asset="gallery/bsut04a.jpg" imageFormat="4:3" sortType="mediaStorage" textX="20" textY="125" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME04_INCLUDED" information="GS_STYLENAME04_INFO"/>
+				<communicatedProducts>
+					<product id="20102154" amount="2"/>
+					<product id="80105833" amount="4"/>
+					<product id="00134189" amount="2"/>
+				</communicatedProducts>
+			</room>
+			<room id="5" name="GS_STYLENAME05_TEXT" build="b05" width="2400" height="2170" depth="410" asset="gallery/bsut05a.jpg" imageFormat="1:1" sortType="mediaStorage" textX="140" textY="37" textColor="0x000000">
+				<details included="GS_STYLENAME05_INCLUDED" information="GS_STYLENAME05_INFO"/>
+				<communicatedProducts>
+					<product id="60134049" amount="1"/>
+					<product id="20134051" amount="2"/>
+					<product id="00134052" amount="2"/>
+					<product id="80227274" amount="2"/>
+					<product id="20227272" amount="3"/>
+					<product id="90227278" amount="1"/>
+					<product id="90105719" amount="1"/>
+				</communicatedProducts>
+			</room>
+			<room id="6" name="GS_STYLENAME06_TEXT" build="b06" width="1200" height="1780" depth="420" asset="gallery/bsut06a.jpg" imageFormat="1:1" sortType="mediaStorage" textX="10" textY="10" textColor="0x000000">
+				<details included="GS_STYLENAME06_INCLUDED" information="GS_STYLENAME06_INFO"/>
+				<communicatedProducts>
+					<product id="60134049" amount="1"/>
+					<product id="90211913" amount="2"/>
+					<product id="90105719" amount="2"/>
+					<product id="00211922" amount="3"/>
+					<product id="40134050" amount="1"/>
+					<product id="30210822" amount="2"/>
+				</communicatedProducts>
+			</room>
+			<room id="7" name="GS_STYLENAME07_TEXT" build="b07" width="3000" height="2300" depth="410" asset="gallery/bsut07a.jpg" imageFormat="4:3" sortType="mediaStorage" textX="10" textY="10" textColor="0x000000">
+				<details included="GS_STYLENAME07_INCLUDED" information="GS_STYLENAME07_INFO"/>
+				<communicatedProducts>
+					<product id="70134044" amount="1"/>
+					<product id="80134048" amount="1"/>
+					<product id="60134049" amount="3"/>
+					<product id="40134050" amount="1"/>
+					<product id="20134051" amount="1"/>
+					<product id="50210816" amount="5"/>
+					<product id="10210818" amount="5"/>
+					<product id="90210824" amount="3"/>
+				</communicatedProducts>
+			</room>
+			<room id="8" name="GS_STYLENAME08_TEXT" build="b08" width="2400" height="1840" depth="420" asset="gallery/bsut08a.jpg" imageFormat="4:3" sortType="mediaStorage" textX="230" textY="10" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME08_INCLUDED" information="GS_STYLENAME08_INFO"/>
+				<communicatedProducts>
+					<product id="80102151" amount="4"/>
+					<product id="50102143" amount="1"/>
+					<product id="60103477" amount="6"/>
+					<product id="70227217" amount="2"/>
+					<product id="70103467" amount="2"/>
+					<product id="90105719" amount="2"/>
+					<product id="80143217" amount="5"/>
+				</communicatedProducts>
+			</room>
+			<room id="9" name="GS_STYLENAME09_TEXT" build="b09" width="2410" height="2170" depth="420" asset="gallery/bsut09a.jpg" imageFormat="4:3" sortType="mediaStorage" textX="10" textY="10" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME09_INCLUDED" information="GS_STYLENAME09_INFO"/>
+				<communicatedProducts>
+					<product id="80102151" amount="2"/>
+					<product id="40102148" amount="1"/>
+					<product id="50102157" amount="3"/>
+					<product id="70178467" amount="5"/>
+					<product id="50178468" amount="1"/>
+					<product id="20103554" amount="2"/>
+				</communicatedProducts>
+			</room>
+			<room id="10" name="GS_STYLENAME10_TEXT" build="b10" width="3600" height="1600" depth="420" asset="gallery/bsut10a.jpg" imageFormat="4:3" sortType="mediaStorage" textX="10" textY="10" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME10_INCLUDED" information="GS_STYLENAME10_INFO"/>
+				<communicatedProducts>
+					<product id="90146178" amount="2"/>
+					<product id="30146181" amount="6"/>
+					<product id="40146185" amount="1"/>
+					<product id="40149834" amount="2"/>
+					<product id="80146188" amount="4"/>
+					<product id="20218442" amount="3"/>
+					<product id="20102154" amount="2"/>
+					<product id="00227230" amount="4"/>
+					<product id="50147373" amount="12"/>
+					<product id="90181223" amount="12"/>
+				</communicatedProducts>
+			</room>
+			<room id="11" name="GS_STYLENAME11_TEXT" build="b11" width="2400" height="1920" depth="420" asset="gallery/bsut11a.jpg" imageFormat="1:1" sortType="mediaStorage" textX="10" textY="10" textColor="0x000000">
+				<details included="GS_STYLENAME11_INCLUDED" information="GS_STYLENAME11_INFO"/>
+				<communicatedProducts>
+					<product id="20218442" amount="1"/>
+					<product id="40102129" amount="2"/>
+					<product id="80102151" amount="1"/>
+					<product id="20210832" amount="2"/>
+					<product id="80210834" amount="4"/>
+					<product id="10210842" amount="2"/>
+					<product id="10211912" amount="4"/>
+					<product id="90181223" amount="2"/>
+					<product id="80211923" amount="3"/>
+					<product id="70221343" amount="2"/>
+					<product id="50196523" amount="1"/>
+				</communicatedProducts>
+			</room>
+			<room id="12" name="GS_STYLENAME12_TEXT" build="b12" width="3100" height="2010" depth="420" asset="gallery/bsut12a.jpg" sortType="mediaStorage" textX="10" textY="20" textColor="0x000000">
+				<details included="GS_STYLENAME12_INCLUDED" information="GS_STYLENAME12_INFO"/>
+				<communicatedProducts>
+					<product id="60134049" amount="1"/>
+					<product id="40134050" amount="1"/>
+					<product id="80134048" amount="1"/>
+					<product id="70134044" amount="1"/>
+					<product id="70210815" amount="3"/>
+					<product id="50210816" amount="2"/>
+					<product id="10210818" amount="2"/>
+					<product id="00211922" amount="8"/>
+				</communicatedProducts>
+			</room>
+			<room id="13" name="GS_STYLENAME13_TEXT" build="b13" width="2400" height="1660" depth="430" asset="gallery/bsut13a.jpg" sortType="mediaStorage" imageFormat="1:1" textX="30" textY="10" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME13_INCLUDED" information="GS_STYLENAME13_INFO"/>
+				<communicatedProducts>
+					<product id="60134049" amount="2"/>
+					<product id="20134051" amount="3"/>
+					<product id="00134047" amount="1"/>
+					<product id="00134429" amount="3"/>
+					<product id="20227229" amount="3"/>
+					<product id="40103553" amount="1"/>
+					<product id="20103554" amount="2"/>
+					<product id="30103474" amount="1"/>
+				</communicatedProducts>
+			</room>
+			<room id="14" name="GS_STYLENAME14_TEXT" build="b14" width="3000" height="1910" depth="410" asset="gallery/bsut14a.jpg" imageFormat="4:3" sortType="mediaStorage" textX="10" textY="10" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME14_INCLUDED" information="GS_STYLENAME14_INFO"/>
+				<communicatedProducts>
+					<product id="40102129" amount="1"/>
+					<product id="80102151" amount="2"/>
+					<product id="20102154" amount="1"/>
+					<product id="50102157" amount="1"/>
+					<product id="60103477" amount="5"/>
+					<product id="80105833" amount="4"/>
+				</communicatedProducts>
+			</room>
+			<room id="15" name="GS_STYLENAME15_TEXT" build="b15" width="1200" height="2040" depth="420" asset="gallery/bsut15a.jpg" imageFormat="4:3" sortType="mediaStorage" textX="10" textY="10" textColor="0x000000">
+				<details included="GS_STYLENAME15_INCLUDED" information="GS_STYLENAME15_INFO"/>
+				<communicatedProducts>
+					<product id="60134049" amount="2"/>
+					<product id="20134051" amount="2"/>
+					<product id="00134052" amount="2"/>
+					<product id="10116665" amount="1"/>
+					<product id="80103565" amount="4"/>
+					<product id="80104447" amount="2"/>
+					<product id="90105719" amount="2"/>
+					<product id="30146181" amount="3"/>
+					<product id="90146178" amount="1"/>
+					<product id="80146188" amount="2"/>
+					<product id="40146185" amount="1"/>
+				</communicatedProducts>
+			</room>
+			<room id="16" name="GS_STYLENAME16_TEXT" build="b16" width="2400" height="1680" depth="420" asset="gallery/bsut16a.jpg" imageFormat="4:3" sortType="mediaStorage" textX="10" textY="10" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME16_INCLUDED" information="GS_STYLENAME16_INFO"/>
+				<communicatedProducts>
+					<product id="60134049" amount="1"/>
+					<product id="00134052" amount="2"/>
+					<product id="20134051" amount="1"/>
+					<product id="00134429" amount="3"/>
+					<product id="80134430" amount="2"/>
+				</communicatedProducts>
+			</room>
+			<room id="17" name="GS_STYLENAME17_TEXT" build="b17" width="3000" height="1920" depth="420" asset="gallery/bsut17a.jpg" imageFormat="4:3" sortType="mediaStorage" textX="230" textY="20" textColor="0x000000">
+				<details included="GS_STYLENAME17_INCLUDED" information="GS_STYLENAME17_INFO"/>
+				<communicatedProducts>
+					<product id="00134047" amount="2"/>
+					<product id="80134048" amount="1"/>
+					<product id="40134050" amount="2"/>
+					<product id="10144734" amount="1"/>
+					<product id="20134428" amount="2"/>
+					<product id="80134430" amount="5"/>
+					<product id="60134431" amount="5"/>
+					<product id="50144497" amount="1"/>
+					<product id="70105027" amount="5"/>
+					<product id="10105836" amount="2"/>
+					<product id="90105719" amount="5"/>
+				</communicatedProducts>
+			</room>
+			<room id="18" name="GS_STYLENAME18_TEXT" build="b18" width="1200" height="1920" depth="420" asset="gallery/bsut18a.jpg" imageFormat="4:3" sortType="mediaStorage" textX="240" textY="150" textColor="0x000000">
+				<details included="GS_STYLENAME18_INCLUDED" information="GS_STYLENAME18_INFO"/>
+				<communicatedProducts>
+					<product id="30218451" amount="1"/>
+					<product id="80134053" amount="1"/>
+					<product id="50178473" amount="2"/>
+					<product id="00178475" amount="2"/>
+					<product id="90181223" amount="2"/>
+					<product id="80134190" amount="3"/>
+				</communicatedProducts>
+			</room>
+			<room id="19" name="GS_STYLENAME19_TEXT" build="b19" width="1800" height="1640" depth="410" asset="gallery/bsut19a.jpg" imageFormat="1:1" sortType="storage" textX="10" textY="195" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME19_INCLUDED" information="GS_STYLENAME19_INFO"/>
+				<communicatedProducts>
+					<product id="60134049" amount="3"/>
+					<product id="20134051" amount="3"/>
+					<product id="00134429" amount="7"/>
+				</communicatedProducts>
+			</room>
+			<!--room id="20" name="GS_STYLENAME20_TEXT" build="b20" width="1800" height="1920" depth="420" asset="gallery/bsut20a.jpg" imageFormat="1:1" sortType="storage" textX="10" textY="195" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME20_INCLUDED" information="GS_STYLENAME20_INFO"/>
+				<communicatedProducts>
+					<product id="80102132" amount="1"/>
+					<product id="40102129" amount="1"/>
+					<product id="50186595" amount="3"/>
+					<product id="00186593" amount="3"/>
+					<product id="30103474" amount="3"/>
+				</communicatedProducts>
+			</room-->
+			<room id="21" name="GS_STYLENAME21_TEXT" build="b20" width="1200" height="1140" depth="410" asset="gallery/bsut21a.jpg" imageFormat="1:1" sortType="storage" textX="10" textY="195" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME21_INCLUDED" information="GS_STYLENAME21_INFO"/>
+				<communicatedProducts>
+					<product id="40102148" amount="3"/>
+					<product id="20227272" amount="3"/>
+				</communicatedProducts>
+			</room>
+			<room id="22" name="GS_STYLENAME22_TEXT" build="b21" width="1800" height="1380" depth="420" asset="gallery/bsut22a.jpg" imageFormat="4:3" sortType="storage" textX="120" textY="10" textColor="0x000000">
+				<details included="GS_STYLENAME22_INCLUDED" information="GS_STYLENAME22_INFO"/>
+				<communicatedProducts>
+					<product id="90134043" amount="1"/>
+					<product id="00134047" amount="1"/>
+					<product id="60103566" amount="3"/>
+					<product id="90178490" amount="3"/>
+					<product id="80143217" amount="5"/>
+				</communicatedProducts>
+			</room>
+			<room id="23" name="GS_STYLENAME23_TEXT" build="b22" width="2410" height="1640" depth="420" asset="gallery/bsut23a.jpg" imageFormat="1:1" sortType="storage" textX="85" textY="190" textColor="0x000000">
+				<details included="GS_STYLENAME23_INCLUDED" information="GS_STYLENAME23_INFO"/>
+				<communicatedProducts>
+					<product id="60134049" amount="5"/>
+					<product id="20134051" amount="1"/>
+					<product id="00134429" amount="11"/>
+				</communicatedProducts>
+			</room>
+			<room id="24" name="GS_STYLENAME24_TEXT" build="b23" width="2420" height="2100" depth="410" asset="gallery/bsut24a.jpg" imageFormat="1:1" sortType="storage" textX="10" textY="10" textColor="0x000000">
+				<details included="GS_STYLENAME24_INCLUDED" information="GS_STYLENAME24_INFO"/>
+				<communicatedProducts>
+					<product id="60134049" amount="2"/>
+					<product id="00134429" amount="4"/>
+					<product id="80134053" amount="2"/>
+					<product id="70227217" amount="4"/>
+				</communicatedProducts>
+			</room>
+			<room id="25" name="GS_STYLENAME25_TEXT" build="b24" width="1800" height="740" depth="420" asset="gallery/bsut25a.jpg" imageFormat="4:3" sortType="storage" textX="20" textY="190" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME25_INCLUDED" information="GS_STYLENAME25_INFO"/>
+				<communicatedProducts>
+					<product id="20102154" amount="1"/>
+					<product id="50102157" amount="1"/>
+					<product id="80227274" amount="2"/>
+					<product id="90105837" amount="1"/>
+					<product id="80143217" amount="5"/>
+				</communicatedProducts>
+			</room>
+			<room id="26" name="GS_STYLENAME26_TEXT" build="b25" width="2400" height="1910" depth="410" asset="gallery/bsut26a.jpg" sortType="storage" textX="50" textY="105" textColor="0x000000">
+				<details included="GS_STYLENAME26_INCLUDED" information="GS_STYLENAME26_INFO"/>
+				<communicatedProducts>
+					<product id="40134050" amount="6"/>
+					<product id="50227218" amount="12"/>
+				</communicatedProducts>
+			</room>
+			<room id="28" name="GS_STYLENAME28_TEXT" build="b26" width="2400" height="740" depth="420" asset="gallery/bsut28a.jpg" imageFormat="4:3" sortType="storage" textX="10" textY="10" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME28_INCLUDED" information="GS_STYLENAME28_INFO"/>
+				<communicatedProducts>
+					<product id="40134050" amount="2"/>
+					<product id="20103554" amount="4"/>
+					<product id="30103474" amount="8"/>
+					<product id="00134189" amount="2"/>
+					<product id="30196538" amount="2"/>
+				</communicatedProducts>
+			</room>
+			<room id="29" name="GS_STYLENAME29_TEXT" build="b27" width="1200" height="1910" depth="410" asset="gallery/bsut29a.jpg" imageFormat="1:1" sortType="storage" textX="150" textY="10" textColor="0x000000">
+				<details included="GS_STYLENAME29_INCLUDED" information="GS_STYLENAME29_INFO"/>
+				<communicatedProducts>
+					<product id="80102132" amount="1"/>
+					<product id="00178550" amount="1"/>
+					<product id="80134430" amount="3"/>
+					<product id="40163962" amount="1"/>
+				</communicatedProducts>
+			</room>
+			<room id="30" name="GS_STYLENAME30_TEXT" build="b28" width="600" height="2020" depth="420" asset="gallery/bsut30a.jpg" imageFormat="1:1" sortType="storage" textX="170" textY="10" textColor="0x000000">
+				<details included="GS_STYLENAME30_INCLUDED" information="GS_STYLENAME30_INFO"/>
+				<communicatedProducts>
+					<product id="80134048" amount="1"/>
+					<product id="10210818" amount="2"/>
+					<product id="00211922" amount="2"/>
+					<product id="50144497" amount="1"/>
+					<product id="80196507" amount="1"/>
+				</communicatedProducts>
+			</room>
+			<room id="31" name="GS_STYLENAME31_TEXT" build="b29" width="3600" height="1970" depth="1280" asset="gallery/bsut31a.jpg" sortType="storage" textX="215" textY="140" textColor="0x000000">
+				<details included="GS_STYLENAME31_INCLUDED" information="GS_STYLENAME31_INFO"/>
+				<communicatedProducts>
+					<product id="10116651" amount="2"/>
+					<product id="80134053" amount="4"/>
+					<product id="60134049" amount="3"/>
+					<product id="80134430" amount="4"/>
+					<product id="00134429" amount="3"/>
+					<product id="10105836" amount="3"/>
+				</communicatedProducts>
+			</room>
+			<room id="32" name="GS_STYLENAME32_TEXT" build="b30" width="1800" height="1910" depth="420" asset="gallery/bsut32a.jpg" imageFormat="1:1" sortType="storage" textX="10" textY="10" textColor="0x000000">
+				<details included="GS_STYLENAME32_INCLUDED" information="GS_STYLENAME32_INFO"/>
+				<communicatedProducts>
+					<product id="70134044" amount="1"/>
+					<product id="80134048" amount="1"/>
+					<product id="50178468" amount="3"/>
+					<product id="10178489" amount="3"/>
+				</communicatedProducts>
+			</room>
+			<!-- Missing copy text for this room - remove comments when we have copy -->
+			<!-- <room id="33" name="GS_STYLENAME33_TEXT" build="b31" width="3610" height="1080" depth="420" asset="gallery/bsut33a.jpg" imageFormat="4:3" sortType="storage" textX="220" textY="160" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME33_INCLUDED" information="GS_STYLENAME33_INFO"/>
+				<communicatedProducts>
+					<product id="60134049" amount="1"/>
+					<product id="70178467" amount="1"/>
+					<product id="10105836" amount="1"/>
+					<product id="40221655" amount="1"/>
+				</communicatedProducts>
+			</room> -->
+			<room id="34" name="GS_STYLENAME34_TEXT" build="b32" width="2400" height="1910" depth="420" asset="gallery/bsut34a.jpg" imageFormat="4:3" sortType="mediaStorage" textX="195" textY="10" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME34_INCLUDED" information="GS_STYLENAME34_INFO"/>
+				<communicatedProducts>
+					<product id="10105836" amount="1"/>
+					<product id="80102151" amount="1"/>
+					<product id="20102154" amount="1"/>
+					<product id="40102148" amount="1"/>
+					<product id="50102157" amount="1"/>
+					<product id="40102129" amount="1"/>
+					<product id="90178466" amount="1"/>
+					<product id="70178467" amount="3"/>
+					<product id="50178468" amount="3"/>
+				</communicatedProducts>
+			</room>
+			<room id="35" name="GS_STYLENAME35_TEXT" build="b33" width="2400" height="1860" depth="420" asset="gallery/bsut35a.jpg" imageFormat="4:3" sortType="mediaStorage" textX="30" textY="20" textColor="0x000000">
+				<details included="GS_STYLENAME35_INCLUDED" information="GS_STYLENAME35_INFO"/>
+				<communicatedProducts>
+					<product id="30218451" amount="2"/>
+					<product id="40134050" amount="2"/>
+					<product id="50178468" amount="4"/>
+					<product id="10178470" amount="4"/>
+					<product id="90181223" amount="4"/>
+				</communicatedProducts>
+			</room>
+			<room id="37" name="GS_STYLENAME37_TEXT" build="b34" width="1300" height="1800" depth="420" asset="gallery/bsut37a.jpg" imageFormat="1:1" sortType="uppleva" textX="10" textY="5" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME37_INCLUDED" information="GS_STYLENAME37_INFO"/>
+				<communicatedProducts>
+				</communicatedProducts>
+			</room>
+			<room id="38" name="GS_STYLENAME38_TEXT" build="b35" width="1800" height="2020" depth="420" asset="gallery/bsut38a.jpg" imageFormat="1:1" sortType="uppleva" textX="10" textY="20" textColor="0x000000">
+				<details included="GS_STYLENAME38_INCLUDED" information="GS_STYLENAME38_INFO"/>
+				<communicatedProducts>
+				</communicatedProducts>
+			</room>
+			<room id="39" name="GS_STYLENAME39_TEXT" build="b36" width="3700" height="1600" depth="420" asset="gallery/bsut39a.jpg" imageFormat="4:3" sortType="uppleva" textX="235" textY="185" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME39_INCLUDED" information="GS_STYLENAME39_INFO"/>
+				<communicatedProducts>
+				</communicatedProducts>
+			</room>
+			<!--<room id="40" name="GS_STYLENAME40_TEXT" build="b37" width="2400" height="1700" depth="420" asset="gallery/bsut40a.jpg" imageFormat="4:3" sortType="uppleva" textX="10" textY="185" textColor="0x000000">
+				<details included="GS_STYLENAME40_INCLUDED" information="GS_STYLENAME40_INFO"/>
+				<communicatedProducts>
+				</communicatedProducts>
+			</room>-->
+			<room id="41" name="GS_STYLENAME41_TEXT" build="b38" width="1200" height="420" depth="420" asset="gallery/bsut41a.jpg" imageFormat="1:1" sortType="uppleva" textX="10" textY="5" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME41_INCLUDED" information="GS_STYLENAME41_INFO"/>
+				<communicatedProducts>
+				</communicatedProducts>
+			</room>
+			<room id="42" name="GS_STYLENAME42_TEXT" build="b39" width="3010" height="1800" depth="420" asset="gallery/bsut42a.jpg" imageFormat="4:3" sortType="uppleva" textX="10" textY="5" textColor="0x000000">
+				<details included="GS_STYLENAME42_INCLUDED" information="GS_STYLENAME42_INFO"/>
+				<communicatedProducts>
+				</communicatedProducts>
+			</room>
+			<room id="43" name="GS_STYLENAME43_TEXT" build="b40" width="1800" height="1350" depth="420" asset="gallery/bsut43a.jpg" imageFormat="4:3" sortType="uppleva" textX="10" textY="185" textColor="0x000000">
+				<details included="GS_STYLENAME43_INCLUDED" information="GS_STYLENAME43_INFO"/>
+				<communicatedProducts>
+				</communicatedProducts>
+			</room>
+			<room id="44" name="GS_STYLENAME44_TEXT" build="b41" width="1800" height="1920" depth="440" asset="gallery/bsut44a.jpg" imageFormat="4:3" sortType="uppleva" textX="235" textY="5" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME44_INCLUDED" information="GS_STYLENAME44_INFO"/>
+				<communicatedProducts>
+				</communicatedProducts>
+			</room>
+			<room id="45" name="GS_STYLENAME45_TEXT" build="b42" width="2400" height="2090" depth="450" asset="gallery/bsut45a.jpg" imageFormat="4:3" sortType="uppleva" textX="10" textY="185" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME45_INCLUDED" information="GS_STYLENAME45_INFO"/>
+				<communicatedProducts>
+				</communicatedProducts>
+			</room>
+			<room id="46" name="GS_STYLENAME46_TEXT" build="b43" width="2400" height="1830" depth="420" asset="gallery/bsut46a.jpg" imageFormat="4:3" sortType="uppleva" textX="80" textY="10" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME46_INCLUDED" information="GS_STYLENAME46_INFO"/>
+				<communicatedProducts>
+				</communicatedProducts>
+			</room>
+			<room id="47" name="GS_STYLENAME47_TEXT" build="b44" width="1830" height="1890" depth="420" asset="gallery/bsut47a.jpg" imageFormat="4:3" sortType="uppleva" textX="235" textY="10" textColor="0x000000">
+				<details included="GS_STYLENAME47_INCLUDED" information="GS_STYLENAME47_INFO"/>
+				<communicatedProducts>
+				</communicatedProducts>
+			</room>
+			<!--<room id="48" name="GS_STYLENAME48_TEXT" build="b45" width="1800" height="1660" depth="420" asset="gallery/bsut48a.jpg" imageFormat="4:3" sortType="uppleva" textX="10" textY="5" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME48_INCLUDED" information="GS_STYLENAME48_INFO"/>
+				<communicatedProducts>
+				</communicatedProducts>
+			</room>
+			<room id="49" name="GS_STYLENAME49_TEXT" build="b46" width="1800" height="1590" depth="420" asset="gallery/bsut49a.jpg" imageFormat="4:3" sortType="uppleva" textX="10" textY="5" textColor="0x000000">
+				<details included="GS_STYLENAME49_INCLUDED" information="GS_STYLENAME49_INFO"/>
+				<communicatedProducts>
+				</communicatedProducts>
+			</room>
+			<room id="50" name="GS_STYLENAME50_TEXT" build="b47" width="2400" height="1600" depth="420" asset="gallery/bsut50a.jpg" imageFormat="4:3" sortType="uppleva" textX="10" textY="185" textColor="0xFFFFFF">
+				<details included="GS_STYLENAME50_INCLUDED" information="GS_STYLENAME50_INFO"/>
+				<communicatedProducts>
+				</communicatedProducts>
+			</room>
+			<room id="51" name="GS_STYLENAME51_TEXT" build="b48" width="3020" height="1980" depth="420" asset="gallery/bsut51a.jpg" imageFormat="4:3" sortType="uppleva" textX="10" textY="5" textColor="0x000000">
+				<details included="GS_STYLENAME51_INCLUDED" information="GS_STYLENAME51_INFO"/>
+				<communicatedProducts>
+				</communicatedProducts>
+			</room>-->
+		</rooms>
+	</gallery>
+
+	<helpStructure type="good_to_know">
+		<intro>
+			<object id="main_head" order="1" type="text" style="header" lf_before="false" lf_after="false" text="GTK_MAIN_HEAD_TEXT" />
+			<object id="main_body" order="2" type="text" style="body" lf_before="false" lf_after="false" text="GTK_MAIN_BODY_01_TEXT" />
+			<object id="main_head2" order="3" type="text" style="header_2" lf_before="false" lf_after="false" text="GTK_MAIN_BODY_02_TEXT" />
+		</intro>
+		<!--section id="par" order="1" label="GTK_PAR_LINK_TEXT">
+			<object id="par_head" order="1" type="text" style="header" lf_before="false" lf_after="false" text="GTK_PAR_HEAD_TEXT" />
+			<object id="par_body" order="2" type="text" style="body" lf_before="false" lf_after="false" text="GTK_PAR_BODY_TEXT" />
+		</section-->
+		<section id="wc" order="2" label="GTK_WC_LINK_TEXT">
+			<object id="wc_head" order="1" type="text" style="header" lf_before="false" lf_after="false" text="GTK_WC_HEAD_TEXT" />
+			<object id="wc_body" order="2" type="text" style="body" lf_before="false" lf_after="false" text="GTK_WC_BODY_TEXT" />
+			<object id="wc_image" order="3" type="image" url="gtk/workchairs.jpg">
+				<tooltip id="wc_tt_01" type="tooltip" x="241" y="139" text="GTK_WC_TOOLTIP_01" />
+				<tooltip id="wc_tt_02" type="tooltip" x="146" y="156" text="GTK_WC_TOOLTIP_02" />
+				<tooltip id="wc_tt_03" type="tooltip" x="179" y="173" text="GTK_WC_TOOLTIP_03" />
+				<tooltip id="wc_tt_04" type="tooltip" x="170" y="128" text="GTK_WC_TOOLTIP_04" />
+				<tooltip id="wc_tt_05" type="tooltip" x="190" y="143" text="GTK_WC_TOOLTIP_05" />
+				<tooltip id="wc_tt_06" type="tooltip" x="142" y="67" text="GTK_WC_TOOLTIP_06" />
+			</object>
+		</section>
+		<section id="ws" order="3" label="GTK_WS_LINK_TEXT">
+			<object id="ws_head" order="1" type="text" style="header" lf_before="false" lf_after="false" text="GTK_WS_HEAD_TEXT" />
+			<object id="ws_body" order="2" type="text" style="body" lf_before="false" lf_after="false" text="GTK_WS_BODY_TEXT" />
+			<object id="ws_image" order="3" type="image" url="gtk/workspace.jpg">
+				<tooltip id="ws_tt_01" type="tooltip" x="66" y="154" text="GTK_WS_TOOLTIP_01" />
+				<tooltip id="ws_tt_02" type="tooltip" x="49" y="193" text="GTK_WS_TOOLTIP_02" />
+				<tooltip id="ws_tt_03" type="tooltip" x="198" y="155" text="GTK_WS_TOOLTIP_03" />
+				<tooltip id="ws_tt_04" type="tooltip" x="148" y="132" text="GTK_WS_TOOLTIP_04" />
+				<tooltip id="ws_tt_05" type="tooltip" x="156" y="105" text="GTK_WS_TOOLTIP_05" />
+				<tooltip id="ws_tt_06" type="tooltip" x="108" y="186" text="GTK_WS_TOOLTIP_06" />
+				<tooltip id="ws_tt_07" type="tooltip" x="268" y="186" text="GTK_WS_TOOLTIP_07" />
+				<tooltip id="ws_tt_08" type="tooltip" x="289" y="229" text="GTK_WS_TOOLTIP_08" />
+				<tooltip id="ws_tt_09" type="tooltip" x="335" y="105" text="GTK_WS_TOOLTIP_09" />
+			</object>
+		</section>
+		<section id="st" order="4" label="GTK_ST_LINK_TEXT">
+			<object id="st_head" order="1" type="text" style="header" lf_before="false" lf_after="false" text="GTK_ST_HEAD_TEXT" />
+			<object id="st_body_01" order="2" type="text" style="body" lf_before="false" lf_after="true" text="GTK_ST_BODY_01_TEXT" />
+			<object id="st_body_02" order="3" type="text" style="body" lf_before="false" lf_after="false" text="GTK_ST_BODY_02_TEXT" />
+			<object id="st_image" order="4" type="image" url="gtk/storage.jpg">
+				<tooltip id="st_tt_01" type="tooltip" x="101" y="202" text="GTK_ST_TOOLTIP_01" />
+				<tooltip id="st_tt_02" type="tooltip" x="315" y="122" text="GTK_ST_TOOLTIP_02" />
+				<tooltip id="st_tt_03" type="tooltip" x="259" y="227" text="GTK_ST_TOOLTIP_03" />
+				<tooltip id="st_tt_04" type="tooltip" x="223" y="102" text="GTK_ST_TOOLTIP_04" />
+				<tooltip id="st_tt_05" type="tooltip" x="178" y="171" text="GTK_ST_TOOLTIP_05" />
+				<tooltip id="st_tt_06" type="tooltip" x="100" y="146" text="GTK_ST_TOOLTIP_06" />
+			</object>
+		</section>
+		<section id="li" order="5" label="GTK_LI_LINK_TEXT">
+			<object id="li_head" order="1" type="text" style="header" lf_before="false" lf_after="false" text="GTK_LI_HEAD_TEXT" />
+			<object id="li_body_01" order="2" type="text" style="body" lf_before="false" lf_after="true" text="GTK_LI_BODY_01_TEXT" />
+			<object id="li_body_02" order="3" type="text" style="body" lf_before="false" lf_after="true" text="GTK_LI_BODY_02_TEXT" />
+			<object id="li_body_03" order="4" type="text" style="body" lf_before="false" lf_after="true" text="GTK_LI_BODY_03_TEXT" />
+			<object id="li_image" order="5" type="image" url="gtk/lightningworkspace01.jpg">
+				<tooltip id="li_tt_01" type="tooltip" x="72" y="183" text="GTK_LI_TOOLTIP_01" />
+				<tooltip id="li_tt_02" type="tooltip" x="34" y="68" text="GTK_LI_TOOLTIP_02" />
+				<tooltip id="li_tt_03" type="tooltip" x="244" y="48" text="GTK_LI_TOOLTIP_03" />
+				<tooltip id="li_tt_04" type="tooltip" x="310" y="96" text="GTK_LI_TOOLTIP_04" />
+			</object>
+			<!--object id="li_body_04" order="3" type="text" style="body" lf_before="false" lf_after="true" text="GTK_LI_BODY_04_TEXT" />
+			<object id="li_body_05" order="3" type="text" style="body" lf_before="false" lf_after="true" text="GTK_LI_BODY_05_TEXT" />
+			<object id="li_body_06" order="3" type="text" style="body" lf_before="false" lf_after="false" text="GTK_LI_BODY_06_TEXT" /-->
+		</section>
+		<!--section id="liw" order="6" label="GTK_LIW_LINK_TEXT">
+			<object id="liw_head" order="1" type="text" style="header" lf_before="false" lf_after="false" text="GTK_LIW_HEAD_TEXT" />
+			<object id="liw_body_01" order="2" type="text" style="body" lf_before="false" lf_after="false" text="GTK_LIW_BODY_01_TEXT" />
+			<object id="liw_image_01" order="3" type="image" url="gtk/lightningworkspace01.jpg" />
+			<object id="liw_body_02" order="4" type="text" style="body" lf_before="false" lf_after="false" text="GTK_LIW_BODY_02_TEXT" />
+			<object id="liw_image_02" order="5" type="image" url="gtk/lightningworkspace02.jpg" />
+			<object id="liw_body_03" order="6" type="text" style="body" lf_before="false" lf_after="false" text="GTK_LIW_BODY_03_TEXT" />
+		</section-->
+		<section id="ac" order="7" label="GTK_AC_LINK_TEXT">
+			<object id="ac_head" order="1" type="text" style="header" lf_before="false" lf_after="false" text="GTK_AC_HEAD_TEXT" />
+			<object id="ac_body_01" order="2" type="text" style="body" lf_before="false" lf_after="true" text="GTK_AC_BODY_01_TEXT" />
+			<object id="ac_image" order="3" type="image" url="gtk/acoustics.jpg" >
+				<tooltip id="ac_tt_01" type="tooltip" x="332" y="77" text="GTK_AC_TOOLTIP_01" />
+				<tooltip id="ac_tt_02" type="tooltip" x="235" y="186" text="GTK_AC_TOOLTIP_02" />				
+			</object>
+		</section>
+	</helpStructure>
+
+
+	<plannerLocale>
+		<textGroup id="General">
+			<texpmt id="GeneralCopy_HideMe" />
+			<text id="GeneralCopy_WidthDepthHeight" />
+			<text id="GeneralButton_open" />
+			<text id="GeneralButton_replace" />
+			<text id="GeneralButton_delete" />
+			<text id="GeneralButton_copy" />
+			<text id="GeneralButton_duplicate" />
+			<text id="GeneralButton_paste" />
+			<text id="GeneralButton_close" />
+			<text id="GeneralButton_options" />
+			<text id="GeneralButton_print" />
+			<text id="GeneralButton_printPDF" />
+			<text id="GeneralButton_Print_Presentation" />
+			<text id="GeneralButton_Print_ProductList" />
+			<text id="GeneralButton_details" />
+			<text id="GeneralButton_yes" />
+			<text id="GeneralButton_no" />
+			<text id="GeneralCopy_Error_Title" />
+			<text id="GeneralCopy_Error_Message" />
+			<text id="PlannerMainTitle" />
+		</textGroup>
+        <textGroup id="Errors">
+            <text id="ERRORS_LOADING_ASSETS" />
+			<text id="ERRORS_SHOPPING_TROLLEY" />
+			<text id="ERRORS_DETAIL" />
+			<text id="ERRORS_SHOPPING_LIST" />
+        </textGroup>
+        <textGroup id="Filters">
+            <text id="FILTER_LABEL" />
+            <text id="WALLS_AND_FLOOR" />
+            <text id="BESTA_COMBINATIONS_TEXT" />
+            <text id="BESTA_FRAMES_TEXT" />
+            <text id="BESTA_TV_BENCHES_TEXT" />
+            <text id="BESTA_PANEL_TEXT" />
+            <text id="BESTA_DESKTOPS_TEXT" />
+            <text id="BESTA_MEDIA_SOLUTIONS_TEXT" />
+            <text id="BESTA_DOORS_TEXT" />
+            <text id="BESTA_DRAWERS_TEXT" />
+            <text id="BESTA_HANDLES_TEXT" />
+            <text id="BESTA_SHELFS_TEXT" />
+            <text id="BESTA_LEGS_TEXT" />
+            <text id="BESTA_ADDONS_TEXT" />
+            <text id="QUICK_FRAME_COLOR_TEXT" />
+            <text id="QUICK_DOOR_COLOR_TEXT" />
+            <text id="BT_DOORS_TEXT" />
+            <text id="BT_DRAWERS_AND_FRONTS_TEXT" />
+            <text id="BT_KNOBS_AND_HANDLES_TEXT" />
+            <text id="BT_SHELFS_AND_INTERIOR_TEXT" />
+            <text id="BT_LEGS_TEXT" />
+            <text id="BT_ADDONS_TEXT" />
+            <text id="TF_FRAME_WALL_TEXT" />
+            <text id="TF_FRAME_FLOOR_TEXT" />
+            <text id="TF_FRAME_SLIDING_TEXT" />
+            <text id="TF_FRAME_CORNER_TEXT" />
+            <text id="TF_PANEL_GLASS_TEXT" />
+            <text id="TF_PANEL_WOOD_TEXT" />
+            <text id="TF_PANEL_PREMADE_TEXT" />
+            <text id="TF_BENCH_BESTA_TEXT" />
+            <text id="TF_BENCH_UPPLEVA_TEXT" />
+            <text id="TF_ALL_SIZES_TEXT" />
+            <text id="TF_ALL_TYPES_TEXT" />
+        </textGroup>
+        <textGroup id="Combinations">
+            <text id="SPR_09897800_NAME" />
+            <text id="SPR_09897800_CUST_BENEFIT" />
+            <text id="SPR_09917577_NAME" />
+            <text id="SPR_09917577_CUST_BENEFIT" />
+            <text id="SPR_09928123_NAME" />
+            <text id="SPR_09928123_CUST_BENEFIT" />
+            <text id="SPR_09928241_NAME" />
+            <text id="SPR_09928241_CUST_BENEFIT" />
+            <text id="SPR_19888862_NAME" />
+            <text id="SPR_19888862_CUST_BENEFIT" />
+            <text id="SPR_19928274_NAME" />
+            <text id="SPR_19928274_CUST_BENEFIT" />
+            <text id="SPR_29928136_NAME" />
+            <text id="SPR_29928136_CUST_BENEFIT" />
+            <text id="SPR_39917646_NAME" />
+            <text id="SPR_39917646_CUST_BENEFIT" />
+            <text id="SPR_39928131_NAME" />
+            <text id="SPR_39928131_CUST_BENEFIT" />
+            <text id="SPR_49898001_NAME" />
+            <text id="SPR_49898001_CUST_BENEFIT" />
+            <text id="SPR_49923883_NAME" />
+            <text id="SPR_49923883_CUST_BENEFIT" />
+            <text id="SPR_49928159_NAME" />
+            <text id="SPR_49928159_CUST_BENEFIT" />
+            <text id="SPR_49928244_NAME" />
+            <text id="SPR_49928244_CUST_BENEFIT" />
+            <text id="SPR_59888855_NAME" />
+            <text id="SPR_59888855_CUST_BENEFIT" />
+            <text id="SPR_59925532_NAME" />
+            <text id="SPR_59925532_CUST_BENEFIT" />
+            <text id="SPR_59928253_NAME" />
+            <text id="SPR_59928253_CUST_BENEFIT" />
+            <text id="SPR_59928286_NAME" />
+            <text id="SPR_59928286_CUST_BENEFIT" />
+            <text id="SPR_79927549_NAME" />
+            <text id="SPR_79927549_CUST_BENEFIT" />
+            <text id="SPR_79928228_NAME" />
+            <text id="SPR_79928228_CUST_BENEFIT" />
+            <text id="SPR_79928233_NAME" />
+            <text id="SPR_79928233_CUST_BENEFIT" />
+            <text id="SPR_79928247_NAME" />
+            <text id="SPR_79928247_CUST_BENEFIT" />
+            <text id="SPR_89888948_NAME" />
+            <text id="SPR_89888948_CUST_BENEFIT" />
+            <text id="SPR_89888953_NAME" />
+            <text id="SPR_89888953_CUST_BENEFIT" />
+            <text id="SPR_89928237_NAME" />
+            <text id="SPR_89928237_CUST_BENEFIT" />
+            <text id="SPR_09927411_NAME" />
+            <text id="SPR_09927411_CUST_BENEFIT" />
+            <text id="SPR_19927401_NAME" />
+            <text id="SPR_19927401_CUST_BENEFIT" />
+            <text id="SPR_69927408_NAME" />
+            <text id="SPR_69927408_CUST_BENEFIT" />
+            <text id="SPR_69927413_NAME" />
+            <text id="SPR_69927413_CUST_BENEFIT" />
+            <text id="SPR_79927403_NAME" />
+            <text id="SPR_79927403_CUST_BENEFIT" />
+            <text id="SPR_89927407_NAME" />
+            <text id="SPR_89927407_CUST_BENEFIT" />
+        </textGroup>
+        <textGroup id="Gallery">
+            <text id="GA_HEADER" />
+            <text id="GA_RANGE_SLIDER_TEXT" />
+            <text id="GA_OPEN_PLAN_TEXT" />
+            <text id="GA_START_PLAN_TEXT" />
+            <text id="GA_NEW_PLAN_TEXT" />
+            <text id="GA_FILTER_ALL_TEXT" />
+            <text id="GA_FILTER_STORAGE_TEXT" />
+            <text id="GA_FILTER_MEDIA_STORAGE_TEXT" />
+            <text id="GA_FILTER_UPPLEVA_TEXT" />
+            <text id="GA_FILTER_LOCAL_FAV_TEXT" />
+        </textGroup>
+        <textGroup id="GeneralConst">
+            <text id="G_NAME" />
+            <text id="G_DESCRIPTION" />
+            <text id="G_SAVE" />
+            <text id="G_SAVE_AS" />
+            <text id="G_CANCEL" />
+            <text id="G_UPDATE" />
+        </textGroup>
+		<textGroup id="Preloader">
+			<text id="Preloader_loading_prefix" />
+			<text id="Preloader_loading_suffix" />
+			<text id="Preloader_planner_intro" />
+		</textGroup>
+        <textGroup id="Landingpage">
+            <text id="landing_header" />
+            <text id="landing_start_with_empty" />
+            <text id="landing_open_plan" />
+            <text id="landing_open_gallery" />
+        </textGroup>
+    
+        <textGroup id="SaveBox">
+            <text id="SB_desc_sessions_text" />
+            <text id="SB_desc_nosessions_text" />
+            <text id="SB_pop_replace_header" />
+            <text id="SB_pop_replace_text" />
+            <text id="SB_save_to_server" />
+            <text id="SB_save_to_local_computer" />
+        </textGroup>
+		<textGroup id="MainTopMenu">
+			<text id="MI_CHANGE_CAMERA" />
+			<text id="MI_NEW" />
+			<text id="MI_NEW_TT" />
+			<text id="MI_OPEN" />
+			<text id="MI_OPEN_TT" />
+			<text id="MI_PRINT" />
+			<text id="MI_SAVE" />
+			<text id="MI_SAVE_TT" />
+			<text id="MI_SAVE_SAVE" />
+			<text id="MI_SAVE_SAVE_AS" />
+			<text id="MI_CHECKOUT" />
+			<text id="MI_CHECKOUT_TT" />
+			<text id="MI_HELP" />
+			<text id="MI_DEFAULT_PLANNER_NAME" />
+			<text id="MI_MY_PLANS" />
+			<text id="MI_GALLERY_HEADER" />
+			<text id="MI_MYPLANS_HEADER" />
+			<text id="MI_USER_GUIDE" />
+			<text id="MI_GOOD_TO_KNOW" />
+			<text id="MI_LOGIN" />
+			<text id="MI_LOGIN_TT" />
+			<text id="MI_PROFILE" />
+			<text id="MI_LOGOUT" />
+		</textGroup>
+        <textGroup id="NewBox">
+            <text id="NB_NEW" />
+            <text id="NB_HEADER" />
+            <text id="NB_GALLERY" />
+        </textGroup>
+        <textGroup id="MyPlansMenu">
+            <text id="MP_OPEN_LOGIN_INFO_1" />
+            <text id="MP_OPEN_LOGIN_INFO_2" />
+            <text id="MP_EDITNAME_AND_DESCRIPTION" />
+            <text id="MP_COPY_PREFIX" />
+            <text id="MP_CONTINUE_PLANNING" />
+            <text id="MP_ON_SERVER" />
+            <text id="MP_ON_LOCAL_COMPUTER" />
+        </textGroup>
+		<textGroup id="TopToolMenu">
+			<text id="TM_POPULATE" />
+			<text id="TM_MEASURE" />
+			<text id="TM_TAG" />
+			<text id="TM_PROPPING" />
+		</textGroup>
+		<textGroup id="ContextMenu">
+			<text id="ContextMenu_save_xml" />
+			<text id="ContextMenu_load_xml" />
+		</textGroup>
+        <textGroup id="TabMenu">
+            <text id="TM_TAB_ADDPRODUCT" />
+            <text id="TM_TAB_EDIT" />
+            <text id="TM_TAB_ROOMLAYOUT" />
+        </textGroup>
+        <textGroup id="ProductTab" type="copy">
+			<text id="PT_RECOMMENDED_PRODUCTS" />
+		</textGroup>
+        <textGroup id="EditTab">
+            <text id="ET_WHATS_INCLUDED" />
+            <text id="ET_QUICKEDIT" />
+            <text id="ET_ADDREMOVE" />
+			<text id="ET_NO_PRODUCT_SELECTED" />
+			<text id="ET_SELECT_TYPE" />
+			<text id="ET_RECOMMENDED_PRODUCTS" />
+			<text id="ET_SELECTED_LIST" />
+        </textGroup>
+		<textGroup id="EditTabToolTips">
+			<text id="ET_TOOLTIP_DOOR_HINGED" />
+			<text id="ET_TOOLTIP_DOOR_SLIDING_120" />
+			<text id="ET_TOOLTIP_DOOR_SLIDING_180_SINGLE" />
+			<text id="ET_TOOLTIP_DOOR_SLIDING_180_DOUBLE" />
+			<text id="ET_TOOLTIP_DRAWER_SPR" />
+			<text id="ET_TOOLTIP_DRAWER_FE_SPR" />
+			<text id="ET_TOOLTIP_DRAWER_GLASS" />
+			<text id="ET_TOOLTIP_DRAWER_FF" />
+			<text id="ET_TOOLTIP_UPPLEVA_TV" />
+			<text id="ET_TOOLTIP_SOUND" />
+		</textGroup>
+		<textGroup id="ProductMenu">
+			<text id="PM_PRODUCTS" />
+			<text id="PM_ROOM" />
+            <text id="PM_LEARN_MORE"/>
+            <text id="PM_INFO"/>
+            <text id="PM_SORTBY_PRICE"/>
+            <text id="PM_SORTBY_NAME"/>
+            <text id="PM_SORTBY_COLOR"/>
+            <text id="PM_DECORATIVEITEMS"/>
+		</textGroup>
+		<textGroup id="RoomMenu">
+			<text id="RM_ROOM_SETTINGS" />
+			<text id="RM_SET_WALL_HEIGHT" />
+			<text id="RM_CHOOSE_WALL_COLOUR" />
+			<text id="RM_CHOOSE_FLOOR_COLOUR" />
+			<text id="RM_ADVANCED_WALL" />
+			<text id="RM_PAINT_ALL_WALLS"/>
+			<text id="RM_CHOOSE_COLOUR" />
+			<text id="RM_CHOOSE_PATTERN" />
+			<text id="RM_ADD_ROOM_EXT" />
+			<text id="RM_ADD_ROOM_EXT_TT" />
+			<text id="RM_ADD_PILLARS" />
+			<text id="RM_ADD_PILLARS_TT" />
+			<text id="RM_ADD_DOOR_WINDOWS" />
+			<text id="Add doors and windows" />
+			<text id="RM_CANT_MOVE_OBJECT" />
+			<text id="RM_WALLHEIGHT" />
+			<text id="RM_WALLWIDTH" />
+		</textGroup>
+        <textGroup id="ProductList" type="copy">
+            <text id="PL_WHATS_NEXT_TEXT" />
+            <text id="PL_WHATS_INCLUDED_TEXT" />
+            <text id="PL_BESTA_HEADER_TEXT" />
+            <text id="PL_ADD_TO_SHOPPING_TEXT" />
+            <text id="PL_LINKTO_TEXT" />
+            <text id="PL_WINDOWHEADER_TEXT" />
+            <text id="PL_PRODUCTPICTURE_TEXT" />
+            <text id="PL_DESCRIPTION_TEXT" />
+            <text id="PL_COUNT_TEXT" />
+            <text id="PL_PRICE_TEXT" />
+            <text id="PL_PRODUCT_TEXT" />
+            <text id="PL_TOTALPRICE_TEXT" />
+            <text id="PL_TOTALSUM_TEXT" />
+            <text id="PL_FAMILYSUM_TEXT" />
+            <text id="PL_TOTALFAMILYSUM_TEXT" />
+            <text id="PL_ADDTOSHOPPINGLIST_TEXT" />
+            <text id="PL_ADDTOSHOPPINGLIST_TEXT_TT" />
+            <text id="PL_ADDTOSHOPPINGCART_TEXT" />
+            <text id="PL_CREATEPDF_TEXT" />
+            <text id="PL_ISELL_TEXT" />
+            <text id="PL_ALSOAD_TEXT" />
+            <text id="PL_ADDONSHEADER_TEXT" />
+            <text id="PL_ADDONSLINK_TEXT" />
+            <text id="PL_ADDONADDLINK_TEXT" />
+            <text id="PL_MYOFFICE_TAB_TEXT" />
+            <text id="PL_HEADER" />
+            <text id="PL_IKEA_SERV_TAB_TEXT" />
+            <text id="PL_HEADPRINTINFO_TEXT" />
+            <text id="PL_ADDONS_TEXT" />
+            <text id="PL_LABEL_frame_combination" />
+            <text id="PL_LABEL_frame" />
+            <text id="PL_LABEL_tv_bench" />
+            <text id="PL_LABEL_family_panel" />
+            <text id="PL_MORE_INFO" />
+			<text id="PL_LABEL_door_hinged" />
+			<text id="PL_LABEL_door_sliding_120" />
+			<text id="PL_LABEL_door_sliding_180_single" />
+			<text id="PL_LABEL_door_sliding_180_double" />
+			<text id="PL_LABEL_family_interior" />
+			<text id="PL_LABEL_family_handle" />
+			<text id="PL_LABEL_leg" />
+			<text id="PL_LABEL_drawer_spr" />
+			<text id="PL_LABEL_drawer_fe_spr" />
+        </textGroup>
+		<textGroup id="BottomToolMenu">
+			<text id="MI_CAMERA_SIDE" />
+			<text id="MI_CAMERA_TOP" />
+			<text id="TT_NEW" />
+			<text id="TT_OPEN" />
+			<text id="TT_SAVE" />
+			<text id="TT_PRINT" />
+			<text id="TT_TOTAL_PRICE" />
+			<text id="TT_ZOOMIN" />
+			<text id="TT_ZOOMOUT" />
+			<text id="TT_PANLEFT" />
+			<text id="TT_PANRIGHT" />
+			<text id="TT_PANFORWARD" />
+			<text id="TT_PANBACK" />
+			<text id="TT_PANCENTER" />
+			<text id="TT_ROTATELEFT" />
+			<text id="TT_ROTATERIGHT" />
+			<text id="TT_CHANGE_CAMERA" />
+			<text id="TT_FULLSCREEN" />
+		</textGroup>
+		<textGroup id="Color">
+            <text id="COLOR" />
+            <text id="COLOR_ALUMINIUM_TEXT" />
+            <text id="COLOR_CHROME_PLATED_TEXT" />
+            <text id="COLOR_LILAC_TEXT" />
+            <text id="COLOR_METAL_TEXT" />
+            <text id="COLOR_GALVANISED_TEXT" />
+            <text id="BAMBOO_PATTERN_HIGH_GLOSS_BROWN" />
+            <text id="COLOR_CLEAR_GLASS_BEECH_EFFECT_TEXT" />
+            <text id="CLEAR_GLASS_BLACK_BROWN" />
+            <text id="CLEAR_GLASS_WALNUT_EFFECT" />
+            <text id="CLEAR_GLASS_WHITE" />
+            <text id="COLOR_GREY_TURQUOISE_TEXT" />
+            <text id="COLOR_HIGH_GLOSS_BLACK_TEXT" />
+            <text id="COLOR_WALNUT_TEXT" />
+            <text id="COLOR_YELLOW_TEXT" />
+            <text id="COLOR_LIGHT_GREY_TEXT" />
+            <text id="COLOR_LIGHT_GREEN_TEXT" />
+            <text id="COLOR_DARK_PURPLE_TEXT" />
+            <text id="COLOR_DEEP_BLUE_TEXT" />
+            <text id="COLOR_LIME_GREEN_TEXT" />
+            <text id="COLOR_LIGHT_BROWN_TEXT" />
+            <text id="COLOR_GREY_BLUE_TEXT" />
+            <text id="COLOR_GREY_GREEN_TEXT" />
+            <text id="COLOR_TURQUOISE_TEXT" />
+            <text id="COLOR_PURPLE_TEXT" />
+            <text id="COLOR_PINK_TEXT" />
+            <text id="COLOR_LIGHT_YELLOW_TEXT" />
+            <text id="COLOR_DARK_BLUE_TEXT" />
+            <text id="COLOR_LIGHT_BLUE_TEXT" />
+            <text id="COLOR_BROWN_TEXT" />
+            <text id="COLOR_BEIGE_TEXT" />
+			<text id="COLOR_BEECH_TEXT" />
+			<text id="COLOR_BIRCH_TEXT" />
+			<text id="COLOR_BLACK_TEXT" />
+			<text id="COLOR_BLACK_BROWN_TEXT" />
+			<text id="COLOR_BLUE_TEXT" />
+			<text id="COLOR_CHROME_TEXT" />
+			<text id="COLOR_DARK_GREY_TEXT" />
+			<text id="COLOR_FABRIC_BLACK_TEXT" />
+			<text id="COLOR_GLASS_TEXT" />
+			<text id="COLOR_GLASS_BLACK_TEXT" />
+			<text id="COLOR_GLASS_WHITE_TEXT" />
+			<text id="COLOR_GOLDEN_BROWN_TEXT" />
+			<text id="COLOR_GREEN_TEXT" />
+			<text id="COLOR_GREY_TEXT" />
+			<text id="COLOR_GREY_BLACK_TEXT" />
+			<text id="COLOR_GREY_BROWN_TEXT" />
+			<text id="COLOR_HIGH_GLOSS_GREY_TEXT" />
+			<text id="COLOR_HIGH_GLOSS_RED_TEXT" />
+			<text id="COLOR_HIGH_GLOSS_WHITE_TEXT" />
+			<text id="COLOR_LIGHT_BEIGE_TEXT" />
+			<text id="COLOR_OAK_TEXT" />
+			<text id="COLOR_ORANGE_TEXT" />
+			<text id="COLOR_RED_TEXT" />
+			<text id="COLOR_SILVER_TEXT" />
+			<text id="COLOR_WHITE_TEXT" />
+		</textGroup>
+        <textGroup id="WallPatterns">
+            <text id="WALL_BLACKPANEL_VER_TEXT" />
+            <text id="WALL_BLACKPANEL_HOR_TEXT" />
+            <text id="WALL_WHITEPANEL_VER_TEXT" />
+            <text id="WALL_WHITEPANEL_HOR_TEXT" />
+            <text id="WALL_PLASTER_GREY_TEXT" />
+            <text id="WALL_PLASTER_WHITE_TEXT" />
+            <text id="WALL_BOHEME_TEXT" />
+            <text id="WALL_BOLON_FABRIC_TEXT" />
+            <text id="WALL_MARCEL_TEXT" />
+            <text id="WALL_MEASURE_TEXT" />
+        </textGroup>
+        <textGroup id="FloorPatterns">
+            <text id="FLOOR_BIRCH_PARQUET_TEXT" />
+            <text id="FLOOR_CONCRETE_TEXT" />
+            <text id="FLOOR_BOLON_FABRIC_TEXT" />
+            <text id="FLOOR_FISHBONE_PARQUET_TEXT" />
+            <text id="FLOOR_OAK_PARQUET_TEXT" />
+            <text id="FLOOR_WALNUT_PARQUET_TEXT" />
+            <text id="FLOOR_LINOLIUM_TEXT" />
+            <text id="FLOOR_ARTIGO_SMOKE_TEXT" />
+            <text id="FLOOR_AKLTRO_STRATUS_TEXT" />
+        </textGroup>
+        <textGroup id="ObjectDialogs">
+            <text id="DLG_PRODUCT_INFORMATION" />
+            <text id="DLG_PRODUCT_REPRESENT" />
+            <text id="DLG_DELETE_ARE_YOU_SURE" />
+            <text id="DLG_EDIT" />
+            <text id="DLG_CHECK" />
+            <text id="DLG_SET_WIDTH" />
+            <text id="DLG_SET_HEIGHT" />
+            <text id="DLG_SET_DEPTH" />
+            <text id="DLG_PRODUCT_NR" />
+            <text id="DLG_NO_PRODUCT_FOUND" />
+            <text id="DLG_PILLAR_HEAD" />
+            <text id="DLG_PILLAR_INFO" />
+            <text id="DLG_PILLAR_RADIUS" />
+            <text id="DLG_CUBE_HEAD" />
+            <text id="DLG_CUBE_INFO" />
+            <text id="DLG_SET_FROMLEFT" />
+            <text id="DLG_SET_FROMRIGHT" />
+            <text id="DLG_SET_FROMFLOOR" />
+            <text id="DLG_YOUR_DESKTOP" />
+            <text id="DLG_SELECT_COLOR" />
+            <text id="DLG_SELECT_PRODUCTS" />
+        </textGroup>
+        <textGroup id="ProductTypes">
+            <text id="PT_ALL" />
+            <text id="PT_SOFAS" />
+            <text id="PT_CHAIRS" />
+            <text id="PT_CHAIR_SPR" />
+            <text id="PT_CHAIR_VISITOR" />
+            <text id="PT_CABINET_STORAGE" />
+            <text id="PT_CABINET_DRAWER" />
+            <text id="PT_DESKS" />
+            <text id="PT_DESK_COMBO" />
+            <text id="PT_WORKSTATIONS" />
+            <text id="PT_SOFA_TABLES" />
+            <text id="PT_LIGHTING" />
+            <text id="PT_GHOST" />
+        </textGroup>
+        <textGroup id="FinalView">
+            <text id="FV_FINAL_VIEW_GOTO_SHOPPINGLIST_LINK" />
+            <text id="FV_FINAL_VIEW_ADDSHOPPINGLIST_CONFIRM" />
+            <text id="FV_FINAL_VIEW_KIOSK_CONTINUE_Q" />
+            <text id="FV_FINAL_VIEW_KIOSK_Q_BTN_NO" />
+            <text id="FV_FINAL_VIEW_KIOSK_Q_BTN_YES" />
+        </textGroup>
+		<textGroup id="Help">
+			<text id="HELP_QUICK_START"/>
+            <text id="HELP_IKEA_SERVICES" />
+            <text id="HELP_IKEA_SERVICES_HEADER" />
+            <text id="HELP_IKEA_SERVICES_LOCAL_HEADER_TEXT" />
+            <text id="HELP_IKEA_SERVICES_LOCAL_TEXT" />
+            <text id="HELP_IKEA_SERVICES_PLANNING_HEADER_TEXT" />
+            <text id="HELP_IKEA_SERVICES_PLANNING_TEXT" />
+            <text id="HELP_IKEA_SERVICES_BUSINESS_HEADER_TEXT" />
+            <text id="HELP_IKEA_SERVICES_BUSINESS_TEXT" />
+            <text id="QUICK_START" />
+            <text id="HELP_PAGE_PREFIX" />
+        </textGroup>
+        <textGroup id="UserGuide">
+            <text id="UG_INDEX" />
+            <text id="UG_MOVIE_00" />
+            <text id="UG_MOVIE_01" />
+            <text id="UG_MOVIE_02" />
+            <text id="UG_MOVIE_03" />
+            <text id="UG_MOVIE_04" />
+            <text id="UG_MOVIE_05" />
+            <text id="UG_MOVIE_01_TEXT" />
+            <text id="UG_MOVIE_02_TEXT" />
+            <text id="UG_MOVIE_03_TEXT" />
+            <text id="UG_MOVIE_04_TEXT" />
+            <text id="UG_MOVIE_05_TEXT" />
+            <text id="UG_CH01" />
+            <text id="UG_CH02" />
+            <text id="UG_USER_GUIDE" />
+        </textGroup>
+    	<textGroup id="GoodToKnow">
+			<text id="GTK_MAIN_HEAD_TEXT" />
+			<text id="GTK_MAIN_BODY_01_TEXT" />
+			<text id="GTK_MAIN_BODY_02_TEXT" />
+			<text id="GTK_PAR_LINK_TEXT" />
+			<text id="GTK_PAR_HEAD_TEXT" />
+			<text id="GTK_PAR_BODY_TEXT" />
+			<text id="GTK_WC_LINK_TEXT" />
+			<text id="GTK_WC_HEAD_TEXT" />
+			<text id="GTK_WC_BODY_TEXT" />
+			<text id="GTK_WC_TOOLTIP_01" />
+			<text id="GTK_WC_TOOLTIP_02" />
+			<text id="GTK_WC_TOOLTIP_03" />
+			<text id="GTK_WC_TOOLTIP_04" />
+			<text id="GTK_WC_TOOLTIP_05" />
+			<text id="GTK_WC_TOOLTIP_06" />
+			<text id="GTK_WS_LINK_TEXT" />
+			<text id="GTK_WS_HEAD_TEXT" />
+			<text id="GTK_WS_BODY_TEXT" />
+			<text id="GTK_WS_TOOLTIP_01" />
+			<text id="GTK_WS_TOOLTIP_02" />
+			<text id="GTK_WS_TOOLTIP_03" />
+			<text id="GTK_WS_TOOLTIP_04" />
+			<text id="GTK_WS_TOOLTIP_05" />
+			<text id="GTK_WS_TOOLTIP_06" />
+			<text id="GTK_WS_TOOLTIP_07" />
+			<text id="GTK_WS_TOOLTIP_08" />
+			<text id="GTK_WS_TOOLTIP_09" />
+			<text id="GTK_ST_LINK_TEXT" />
+			<text id="GTK_ST_HEAD_TEXT" />
+			<text id="GTK_ST_BODY_01_TEXT" />
+			<text id="GTK_ST_BODY_02_TEXT" />
+			<text id="GTK_ST_TOOLTIP_01" />
+			<text id="GTK_ST_TOOLTIP_02" />
+			<text id="GTK_ST_TOOLTIP_03" />
+			<text id="GTK_ST_TOOLTIP_04" />
+			<text id="GTK_ST_TOOLTIP_05" />
+			<text id="GTK_ST_TOOLTIP_06" />
+			<text id="GTK_LI_LINK_TEXT" />
+			<text id="GTK_LI_HEAD_TEXT" />
+			<text id="GTK_LI_BODY_01_TEXT" />
+			<text id="GTK_LI_BODY_02_TEXT" />
+			<text id="GTK_LI_BODY_03_TEXT" />
+			<text id="GTK_LI_TOOLTIP_01" />
+			<text id="GTK_LI_TOOLTIP_02" />
+			<text id="GTK_LI_TOOLTIP_03" />
+			<text id="GTK_LI_TOOLTIP_04" />
+			<text id="GTK_AC_LINK_TEXT" />
+			<text id="GTK_AC_HEAD_TEXT" />
+			<text id="GTK_AC_BODY_01_TEXT" />
+			<text id="GTK_AC_TOOLTIP_01" />
+			<text id="GTK_AC_TOOLTIP_02" />
+			<text id="PM_IKEAMAN_DESKS" />
+			<text id="ToolsPicker_ikeaman_populate" />
+			<text id="ToolsPicker_ikeaman_tag" />
+			<text id="ToolsPicker_ikeaman_propping" />
+			<text id="UG_IKEAMAN_DIALOG" />
+			<text id="GTK_IKEAMAN_DIALOG" />
+        </textGroup>
+        <textGroup id="galleryBullets">
+            <text id="GS_STYLENAME01_BULLET_TEXT_01" />
+            <text id="GS_STYLENAME01_BULLET_TEXT_02" />
+            <text id="GS_STYLENAME01_BULLET_TEXT_03" />
+            <text id="GS_STYLENAME02_BULLET_TEXT_01" />
+            <text id="GS_STYLENAME02_BULLET_TEXT_02" />
+            <text id="GS_STYLENAME03_BULLET_TEXT_01" />
+            <text id="GS_STYLENAME03_BULLET_TEXT_02" />
+            <text id="GS_STYLENAME04_BULLET_TEXT_01" />
+            <text id="GS_STYLENAME04_BULLET_TEXT_02" />
+            <text id="GS_STYLENAME04_BULLET_TEXT_03" />
+            <text id="GS_STYLENAME05_BULLET_TEXT_01" />
+            <text id="GS_STYLENAME05_BULLET_TEXT_02" />
+            <text id="GS_STYLENAME05_BULLET_TEXT_03" />
+            <text id="GS_STYLENAME05_BULLET_TEXT_04" />
+            <text id="GS_STYLENAME06_BULLET_TEXT_01" />
+            <text id="GS_STYLENAME06_BULLET_TEXT_02" />
+            <text id="GS_STYLENAME06_BULLET_TEXT_03" />
+            <text id="GS_STYLENAME06_BULLET_TEXT_04" />
+            <text id="GS_STYLENAME07_BULLET_TEXT_01" />
+            <text id="GS_STYLENAME07_BULLET_TEXT_02" />
+            <text id="GS_STYLENAME08_BULLET_TEXT_01" />
+            <text id="GS_STYLENAME08_BULLET_TEXT_02" />
+            <text id="GS_STYLENAME08_BULLET_TEXT_03" />
+            <text id="GS_STYLENAME08_BULLET_TEXT_04" />
+            <text id="GS_STYLENAME08_BULLET_TEXT_05" />
+            <text id="GS_STYLENAME09_BULLET_TEXT_01" />
+            <text id="GS_STYLENAME09_BULLET_TEXT_02" />
+        </textGroup>
+        <textGroup id="LoginDialog">
+            <text id="Login_Dialog_Header" />
+            <text id="Login_Dialog_SubHeader" />
+            <text id="Login_Dialog_LoginHeader" />
+            <text id="Login_Dialog_Username" />
+            <text id="Login_Dialog_Password" />
+            <text id="Login_Dialog_Login" />
+            <text id="Login_Dialog_BenefitsHeader" />
+            <text id="Login_Dialog_Benefits0" />
+            <text id="Login_Dialog_Benefits1" />
+            <text id="Login_Dialog_Benefits2" />
+            <text id="Login_Dialog_Benefits3" />
+            <text id="Login_Dialog_CreateHeader" />
+            <text id="Login_Dialog_CreateFirstName" />
+            <text id="Login_Dialog_CreateLastName" />
+            <text id="Login_Dialog_CreateEmail" />
+            <text id="Login_Dialog_CreateEmailConfirm" />
+            <text id="Login_Dialog_CreatePassword" />
+            <text id="Login_Dialog_CreatePasswordConfirm" />
+            <text id="Login_Dialog_CaptchaInfo1" />
+            <text id="Login_Dialog_CaptchaInfo2" />
+            <text id="Login_Dialog_AcceptPolicy" />
+            <text id="Login_Dialog_Create" />
+            <text id="Login_Dialog_CantLogin" />
+            <text id="Login_Dialog_WrongUserOrPassword" />
+            <text id="Login_Dialog_CantCreate" />
+        </textGroup>
+        <textGroup id="SuperGroupSizes">
+            <text id="SIZE_SUPERGRP_TB01SS" />
+            <text id="SIZE_SUPERGRP_TB02SS" />
+            <text id="SIZE_SUPERGRP_TB03SS" />
+            <text id="SIZE_SUPERGRP_CRT01SS" />
+            <text id="SIZE_SUPERGRP_CRT02SS" />
+            <text id="DC_LEG_LG03_CRT01" />
+            <text id="DC_LEG_LG03_CRT02" />
+            <text id="DC_LEG_LG03_TB02" />
+            <text id="DC_LEG_LG03_TB03" />
+        </textGroup>
+        <textGroup id="StyleNames">
+            <text id="GS_STYLENAME01_INCLUDED" />
+            <text id="GS_STYLENAME01_TEXT" />
+            <text id="GS_STYLENAME01_INFO" />
+            <text id="GS_STYLENAME02_INCLUDED" />
+            <text id="GS_STYLENAME02_TEXT" />
+			<text id="GS_STYLENAME02_INFO" />
+            <text id="GS_STYLENAME03_INCLUDED" />
+            <text id="GS_STYLENAME03_TEXT" />
+			<text id="GS_STYLENAME03_INFO" />
+            <text id="GS_STYLENAME04_INCLUDED" />
+            <text id="GS_STYLENAME04_TEXT" />
+			<text id="GS_STYLENAME04_INFO" />
+            <text id="GS_STYLENAME05_INCLUDED" />
+            <text id="GS_STYLENAME05_TEXT" />
+			<text id="GS_STYLENAME05_INFO" />
+            <text id="GS_STYLENAME06_INCLUDED" />
+            <text id="GS_STYLENAME06_TEXT" />
+			<text id="GS_STYLENAME06_INFO" />
+            <text id="GS_STYLENAME07_INCLUDED" />
+            <text id="GS_STYLENAME07_TEXT" />
+			<text id="GS_STYLENAME07_INFO" />
+            <text id="GS_STYLENAME08_INCLUDED" />
+            <text id="GS_STYLENAME08_TEXT" />
+			<text id="GS_STYLENAME08_INFO" />
+            <text id="GS_STYLENAME09_INCLUDED" />
+            <text id="GS_STYLENAME09_TEXT" />
+			<text id="GS_STYLENAME09_INFO" />
+            <text id="GS_STYLENAME10_INCLUDED" />
+            <text id="GS_STYLENAME10_TEXT" />
+			<text id="GS_STYLENAME10_INFO" />
+            <text id="GS_STYLENAME11_INCLUDED" />
+            <text id="GS_STYLENAME11_TEXT" />
+			<text id="GS_STYLENAME11_INFO" />
+            <text id="GS_STYLENAME12_INCLUDED" />
+            <text id="GS_STYLENAME12_INFO" />
+            <text id="GS_STYLENAME13_INCLUDED" />
+            <text id="GS_STYLENAME13_TEXT" />
+			<text id="GS_STYLENAME13_INFO" />
+            <text id="GS_STYLENAME14_INCLUDED" />
+            <text id="GS_STYLENAME14_TEXT" />
+			<text id="GS_STYLENAME14_INFO" />
+            <text id="GS_STYLENAME15_INCLUDED" />
+            <text id="GS_STYLENAME15_TEXT" />
+			<text id="GS_STYLENAME15_INFO" />
+            <text id="GS_STYLENAME16_INCLUDED" />
+            <text id="GS_STYLENAME16_TEXT" />
+			<text id="GS_STYLENAME16_INFO" />
+            <text id="GS_STYLENAME17_INCLUDED" />
+            <text id="GS_STYLENAME17_TEXT" />
+			<text id="GS_STYLENAME17_INFO" />
+            <text id="GS_STYLENAME18_INCLUDED" />
+            <text id="GS_STYLENAME18_TEXT" />
+			<text id="GS_STYLENAME18_INFO" />
+            <text id="GS_STYLENAME19_INCLUDED" />
+            <text id="GS_STYLENAME19_TEXT" />
+			<text id="GS_STYLENAME19_INFO" />
+            <text id="GS_STYLENAME20_INCLUDED" />
+            <text id="GS_STYLENAME20_TEXT" />
+			<text id="GS_STYLENAME20_INFO" />
+            <text id="GS_STYLENAME31_INCLUDED" />
+            <text id="GS_STYLENAME31_TEXT" />
+			<text id="GS_STYLENAME31_INFO" />
+            <text id="GS_STYLENAME32_INCLUDED" />
+            <text id="GS_STYLENAME32_INFO" />
+            <text id="GS_STYLENAME33_INCLUDED" />
+            <text id="GS_STYLENAME33_TEXT" />
+			<text id="GS_STYLENAME33_INFO" />
+            <text id="GS_STYLENAME34_INCLUDED" />
+            <text id="GS_STYLENAME34_TEXT" />
+			<text id="GS_STYLENAME34_INFO" />
+            <text id="GS_STYLENAME35_INCLUDED" />
+            <text id="GS_STYLENAME35_TEXT" />
+			<text id="GS_STYLENAME35_INFO" />
+        </textGroup>
+		<textGroup id="InfoPopups" type="copy">
+			<text id="PU_GALLERY_TEXT_0"/>	
+			<text id="PU_GALLERY_TEXT_1"/>
+			<text id="PU_GALLERY_TEXT_2"/>
+			<text id="PU_GALLERY_TEXT_3"/>
+			<text id="PU_SCENE_TEXT_0"/>
+			<text id="PU_SCENE_TEXT_1"/>
+			<text id="PU_PROPPING_TEXT"/>
+			<text id="PU_QUICK_EDIT_TEXT"/>
+			<text id="PU_ADD_REMOVE_PARTS_TEXT"/>
+		</textGroup>
+	</plannerLocale>
+
+</global_data>
